@@ -1,4 +1,5 @@
 import React from "react"
+import { Link, withPrefix } from "gatsby"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
@@ -12,7 +13,7 @@ function Menu() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" style={{}}>
             <div className="containerLink">
-              <Nav.Link href="/" className="nav-item my-2">
+              <Nav.Link href={withPrefix('/')} className="nav-item my-2">
                 Home
               </Nav.Link>
             </div>
@@ -22,7 +23,7 @@ function Menu() {
               </Nav.Link>
             </div>
             <div className="containerLink">
-              <Nav.Link href="/team" className="nav-item my-2">
+              <Nav.Link href={ withPrefix('/team') } className="nav-item my-2">
                 Team
               </Nav.Link>
             </div>
