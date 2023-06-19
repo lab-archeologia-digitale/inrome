@@ -1,5 +1,48 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { Card, Row, Col } from "react-bootstrap";
+
+const persons = [
+  {
+    "name": "Barbara Borg",
+    "img": "../images/borg.png",
+    "role": "PI",
+    "position": "Professor of Archaeology",
+    "insititution": "Scuola Normale Superiore",
+    "color": "#a95862"
+  },
+  {
+    "name": "Barbara Borg",
+    "img": "../images/borg.png",
+    "role": "PI",
+    "position": "Professor of Archaeology",
+    "insititution": "Scuola Normale Superiore",
+    "color": "#a99e58"
+  },
+  {
+    "name": "Barbara Borg",
+    "img": "../images/borg.png",
+    "role": "PI",
+    "position": "Professor of Archaeology",
+    "insititution": "Scuola Normale Superiore",
+    "color": "#a95862"
+  },
+  {
+    "name": "Barbara Borg",
+    "img": "../images/borg.png",
+    "role": "PI",
+    "position": "Professor of Archaeology",
+    "insititution": "Scuola Normale Superiore"
+  },
+  {
+    "name": "Barbara Borg",
+    "img": "../images/borg.png",
+    "role": "PI",
+    "position": "Professor of Archaeology",
+    "insititution": "Scuola Normale Superiore",
+    "color": "#a95862"
+  }
+
+];
 
 const Team = () => {
   return (
@@ -29,200 +72,24 @@ const Team = () => {
       </section>
       <section className="py-5 text-center">
         <div className="container">
-          <div className="row">
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="progetti"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body cardColor1">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="news"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body cardColor2">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="output"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="output"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="output"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-5">
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="progetti"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body cardColor1">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="news"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body cardColor2">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="output"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="output"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
-                <StaticImage
-                  src="../images/borg.png"
-                  formats={["AUTO", "WEBP"]}
-                  alt="output"
-                  className="card-img-top"
-                  height={300}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Barbara Borg</h5>
-                  <p className="cardTeam">
-                    PI<br></br>
-                    Professor of Archaeology<br></br>
-                    Scuola Normale Superiore
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Row>
+            { persons.map( person => {
+              return <Col xs="6" lg="3" className="py-3">
+                <Card>
+                  <Card.Img variant="bottom" src={person.img} as="img" alt={ `${person.position}: ${person.name}` } />
+                  <Card.Body style={{
+                    color: '#ffffff',
+                    backgroundColor: person.color ?? '#588aa9'
+                  }}
+                  className={person.color}>
+                    <Card.Title>{ person.name }</Card.Title>
+                    <Card.Text className="text-center">{ person.role }</Card.Text>
+                    <Card.Text className="text-center">{ person.position } <br /> { person.insititution }</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            }) }
+          </Row>
         </div>
       </section>
     </div>
