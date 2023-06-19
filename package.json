@@ -33,7 +33,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build --prefix-paths && cp -R public/* docs/",
+    "build": "gatsby build --prefix-paths && rm -rf docs/* && cp -R public/* docs/",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
