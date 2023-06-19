@@ -2,11 +2,12 @@ import React from "react"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
+import Container from "react-bootstrap/Container"
 
 function Menu() {
   return (
     <Navbar className="navbar" expand="lg">
-      <div className="d-flex">
+      <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" style={{}}>
@@ -64,7 +65,7 @@ function Menu() {
             </div>
           </Nav>
         </Navbar.Collapse>
-      </div>
+      </Container>
     </Navbar>
   )
 }
