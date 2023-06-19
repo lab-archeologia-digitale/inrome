@@ -4,7 +4,7 @@ module.exports = {
     description: `The Inscribed city urban structures and interaction in imperial ROME`,
     author: `@iacopini`,
   },
-  pathPrefix: `/in-rome-preview`,
+  pathPrefix: `/inrome`,
   plugins: [
     `gatsby-plugin-image`,
     {
