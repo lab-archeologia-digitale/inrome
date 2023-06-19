@@ -1,9 +1,9 @@
 {
-  "name": "@r-ichard/gatsby-starter-bootstrap-5",
+  "name": "inrome",
   "private": false,
-  "description": "A simple starter to get up and developing quickly with Gatsby 5 and Bootstrap 5",
-  "version": "2.0.2",
-  "author": "Richard Raduly <richard@raduly.fr>",
+  "description": "A first draft for the In-Rome project",
+  "version": "0.0.1",
+  "author": "Eleonora Icopini <eleonira.iacopini@uniroma1.it>",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
