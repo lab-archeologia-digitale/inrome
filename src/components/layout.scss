@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: "Roboto";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Cinzel";
+}
+
+p {
+  text-align: justify;
+}
+.navbar-topbar {
+  background-color: #8b5a40;
+  height: auto;
+  border-bottom: #3e281c solid 20px;
+  margin: 0;
+}
+.navbar-brand {
+  margin-right: auto;
+}
+.footerLink {
+  margin-right: auto;
+  margin-top: 20px;
+  color: #fff;
+}
+.header-title {
+  color: #fff;
+  font-family: "Cinzel";
+  font-size: 18px;
+}
+.header-right {
+  display: flex !important;
+}
+
+.navbar {
+  background-color: #8b5a40;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  border-right: 1px solid white;
+}
+
+.containerLink:hover {
+  background-color: #a99e58;
+}
+
+.nav-link {
+  padding: 0;
+  width: 100px;
+  text-align: center;
+}
+
+#basic-nav-dropdown {
+  color: #fff;
+}
+
+.dropdown-menu {
+  background-color: #a99e58;
+  color: #fff;
+  padding-left: 10px;
+  border-radius: 0;
+  border: none !important;
+  margin: 0 !important;
+}
+
+.dropdown-item {
+  border: 0 !important;
+}
+
+.slide {
+  min-height: 300px;
+  border-bottom: #3e281c solid 10px;
+}
+.subTitle {
+  text-align: center;
+}
+.btn-primary {
+  background-color: #8b5a40 !important;
+  color: #fff;
+  border-color: #8b5a40;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.btn:hover {
+  border-color: #3e281c;
+}
+
+.news {
+  background-color: #f3e9e3;
+}
+
+.card {
+  border-radius: 5px;
+}
+.card img {
+  -webkit-transition: all 0.9s ease !important;
+  -moz-transition: all 0.9s ease !important;
+  -o-transition: all 0.9s ease !important;
+  -ms-transition: all 0.9s ease !important;
+  width: 100%;
+  height: 200px;
+}
+.card:hover img {
+  opacity: 0.7 !important;
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.card-body {
+  background-color: #588aa9;
+  color: #fff;
+}
+
+.cardColor1 {
+  background-color: #a95862;
+  color: #fff;
+}
+
+.cardColor2 {
+  background-color: #a99e58;
+  color: #fff;
+}
+
+.cardTeam {
+  font-size: 12px;
+  text-align: left !important;
+}
