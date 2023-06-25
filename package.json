@@ -7,15 +7,15 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
-    "gatsby": "^5.1.0",
-    "gatsby-plugin-gatsby-cloud": "^5.1.0",
-    "gatsby-plugin-image": "^3.1.0",
-    "gatsby-plugin-manifest": "^5.1.0",
-    "gatsby-plugin-offline": "^6.1.0",
-    "gatsby-plugin-sass": "^6.1.0",
-    "gatsby-plugin-sharp": "^5.1.0",
-    "gatsby-source-filesystem": "^5.1.0",
-    "gatsby-transformer-sharp": "^5.1.0",
+    "gatsby": "^4.14.1",
+    "gatsby-plugin-gatsby-cloud": "^4.25.0",
+    "gatsby-plugin-image": "^1.4.1",
+    "gatsby-plugin-manifest": "^4.25.0",
+    "gatsby-plugin-offline": "^5.25.0",
+    "gatsby-plugin-sass": "^5.25.0",
+    "gatsby-plugin-sharp": "^4.25.1",
+    "gatsby-source-filesystem": "^4.25.0",
+    "gatsby-transformer-sharp": "^4.25.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
@@ -23,7 +23,8 @@
     "sass": "1.49.11"
   },
   "devDependencies": {
-    "prettier": "2.5.1"
+    "gh-pages": "^3.0.0",
+    "prettier": "^2.8.8"
   },
   "keywords": [
     "gatsby",
@@ -40,7 +41,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && rm -rf docs/* && cp -R public/* docs/ && git add docs && git commit -m 'New deploy' && git push"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "_deploy": "gatsby build --prefix-paths && rm -rf docs/* && cp -R public/* docs/ && git add docs && git commit -m 'New deploy' && git push"
   },
   "repository": {
     "type": "git",
