@@ -40,9 +40,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "_deploy": "gatsby build --prefix-paths && rm -rf docs/* && cp -R public/* docs/ && git add docs && git commit -m 'New deploy' && git push"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
