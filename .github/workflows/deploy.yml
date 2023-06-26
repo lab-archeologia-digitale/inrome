@@ -1,4 +1,5 @@
 name: Gatsby Deploy
+# Reference: https://github.com/settings/personal-access-tokens/1540080
 
 on:
   push:
