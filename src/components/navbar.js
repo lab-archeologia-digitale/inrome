@@ -7,22 +7,20 @@ const Navbar = ({ siteTitle }) => {
   return (
     <header>
       <div className="d-flex navbar-topbar">
-        <div className="navbar-brand p-4">
+        <div className="p-3 me-auto">
           <a href="/">
             <StaticImage
               src="../images/INRome_logo_def.png"
-              width={340}
-              quality={30}
+              width={250}
               formats={["AUTO", "WEBP"]}
-              alt="InRome"
-              className="img-fluid"
+              alt={ siteTitle }
             />
           </a>
           <p className="header-title">
-            The Inscribed city urban structures and interaction in imperial ROME
+            { siteTitle }
           </p>
         </div>
-        <div className="p-4">
+        <div className="p-3">
           {" "}
           <a href="/">
             <StaticImage
@@ -31,7 +29,6 @@ const Navbar = ({ siteTitle }) => {
               quality={30}
               formats={["AUTO", "WEBP"]}
               alt="erc"
-              className="img-fluid"
             />
           </a>
         </div>
@@ -44,7 +41,6 @@ const Navbar = ({ siteTitle }) => {
               quality={30}
               formats={["AUTO", "WEBP"]}
               alt="SNS"
-              className="img-fluid"
             />
           </a>
         </div>
