@@ -119,7 +119,7 @@ const Wrapper = styled.section`
     .card-body {
       background-color: #588aa9;
     }
-Ottimi  }
+}
 `
 
 export default Home
