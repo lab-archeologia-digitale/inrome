@@ -51,11 +51,11 @@ const Team = () => {
       <section className="py-5 text-center">
         <Container>
           <Row>
-            {data.directus.team.map(person => {
+            {data.directus.team.map((person, index) => {
               return (
-                <Col xs="6" lg="3" className="py-3">
+                <Col xs="6" lg="3" className="py-3" key={index}>
                   <Card>
-                    <GatsbyImage image={person.image.imageFile.childImageSharp.gatsbyImageData} />
+                    <GatsbyImage image={person.image.imageFile.childImageSharp.gatsbyImageData} alt={person.title}/>
                     <Card.Body
                       style={{
                         color: "#ffffff",
@@ -63,7 +63,7 @@ const Team = () => {
                       }}
                       className={person.color}
                     >
-                      <Card.Title>{person.title}</Card.Title>
+                      <Card.Title className="border-bottom">{person.title}</Card.Title>
                       <Card.Text 
                         className="text-center" 
                         dangerouslySetInnerHTML={{ 
