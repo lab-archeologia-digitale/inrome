@@ -10,7 +10,7 @@ const Home = () => {
   const data = useStaticQuery(graphql`
     {
       directus {
-        articles(filter: {slug: {_eq: "home"}}) {
+        articles(limit: 1, filter: {slug: {_eq: "home"}}) {
           id
           title
           slug

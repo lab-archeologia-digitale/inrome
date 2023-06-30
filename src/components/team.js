@@ -48,7 +48,7 @@ const Team = () => {
   const data = useStaticQuery(graphql`
     {
       directus {
-        articles(filter: {slug: {_eq: "team"}}) {
+        articles(limit: 1, filter: {slug: {_eq: "team"}}) {
           id
           title
           slug
