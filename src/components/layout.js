@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "./navbar"
 import "./layout.scss"
-import Footer from "./footer"
+import FooterPage from "./footer"
+import MenuPage from "../components/menu"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,8 +21,9 @@ const Layout = ({ children }) => {
   return (
     <div className="container-fluid p-0">
       <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <MenuPage />
       <main>{children}</main>
-      <Footer />
+      <FooterPage />
     </div>
   )
 }

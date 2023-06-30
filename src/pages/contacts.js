@@ -2,14 +2,14 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import { Seo } from "../components/seo"
-import About from "../components/about.js"
+import Contacts from "../components/contact.js"
 
-const PageAbout = () => (
+const PageContact = () => (
   <Layout>
-    <About />
+    <Contacts />
   </Layout>
 )
 
-export default PageAbout
+export default PageContact
 
 export const Head = () => <Seo />

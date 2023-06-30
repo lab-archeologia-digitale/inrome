@@ -2,14 +2,14 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import { Seo } from "../components/seo"
-import About from "../components/about.js"
+import Privacy from "../components/privacy.js"
 
-const PageAbout = () => (
+const PagePrivacy = () => (
   <Layout>
-    <About />
+    <Privacy />
   </Layout>
 )
 
-export default PageAbout
+export default PagePrivacy
 
 export const Head = () => <Seo />

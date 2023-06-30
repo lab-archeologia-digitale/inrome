@@ -1,5 +1,6 @@
 import * as React from "react"
 
+// component
 import Layout from "../components/layout"
 import { Seo } from "../components/seo"
 import Slide from "../components/slide"

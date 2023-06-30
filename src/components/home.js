@@ -1,37 +1,42 @@
 import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import { Row, Col, Container, Card } from "react-bootstrap"
+
+//other
 import { StaticImage } from "gatsby-plugin-image"
 
 const Home = () => {
+  const data = useStaticQuery(graphql`
+    {
+      directus {
+        articles_by_id(id: "1") {
+          id
+          title
+          text
+        }
+      }
+    }
+  `)
   return (
-    <div>
+    <Wrapper>
       <section className="py-5">
-        <div className="container">
-          <div className="row">
-            <h1>TITOLO</h1>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-              veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-              vel eum iure reprehenderit qui in ea voluptate velit esse quam
-              nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-              voluptas nulla pariatur?
-            </p>
-          </div>
-        </div>
+        <Container>
+          <Row>
+            <h1>{data.directus.articles_by_id.title}</h1>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: data.directus.articles_by_id.text,
+              }}
+            />
+          </Row>
+        </Container>
       </section>
       <section className="py-5 text-center news">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm">
-              <div className="card">
+        <Container>
+          <Row>
+            <Col sm={4} xs={12}>
+              <Card>
                 <StaticImage
                   src="../images/progetti.png"
                   formats={["AUTO", "WEBP"]}
@@ -40,12 +45,15 @@ const Home = () => {
                   height={300}
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Sub Projects</h5>
+                  <h5 className="card-title">
+                    {" "}
+                    <a href="/">Sub Projects</a>
+                  </h5>
                 </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
+              </Card>
+            </Col>
+            <Col sm={4} xs={12}>
+              <Card>
                 <StaticImage
                   src="../images/news.png"
                   formats={["AUTO", "WEBP"]}
@@ -54,12 +62,14 @@ const Home = () => {
                   height={300}
                 />
                 <div className="card-body">
-                  <h5 className="card-title">News</h5>
+                  <h5 className="card-title">
+                    <a href="/">News</a>
+                  </h5>
                 </div>
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="card">
+              </Card>
+            </Col>
+            <Col sm={4} xs={12}>
+              <Card>
                 <StaticImage
                   src="../images/output.png"
                   formats={["AUTO", "WEBP"]}
@@ -68,15 +78,45 @@ const Home = () => {
                   height={300}
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Outputs</h5>
+                  <h5 className="card-title">
+                    <a href="/">Outputs</a>
+                  </h5>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </section>
-    </div>
+    </Wrapper>
   )
 }
+
+//style
+const Wrapper = styled.section`
+  .news {
+    background-color: #f3e9e3;
+  }
+  .card {
+    border-radius: 5px;
+  }
+  .card-body {
+    background-color: #588aa9;
+  }
+
+  .card-title a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .card-title a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .gatsby-image-wrapper:hover img {
+    opacity: 0.7 !important;
+    transition: all 1s ease;
+  }
+`
 
 export default Home

@@ -3,6 +3,7 @@ module.exports = {
     title: `INRome - The Inscribed city urban structures and interaction in imperial ROME`,
     description: `The Inscribed city urban structures and interaction in imperial ROME`,
     author: `@iacopini`,
+    copyright: `© Scuola Normale Superiore 2023`,
   },
   pathPrefix: `/inrome`,
   plugins: [
@@ -37,5 +38,24 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: "@directus/gatsby-source-directus",
+      options: {
+        url: `https://inrome.bdus.cloud`, // Fill with your Directus instance address
+        auth: {
+          token: "kLomRx_qlB0hfdr0g9w0DxC1TD3ccSGS", // You can use a static token from an user
+
+          // Or you can use the credentials of an user
+          // email: "johndoe@directus.cloud",
+          // password: "mysecretpassword",
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
   ],
 }
