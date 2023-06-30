@@ -99,26 +99,27 @@ const Wrapper = styled.section`
     background-color: #f3e9e3;
   }
   .card {
-    border-radius: 5px;
-  }
-  .card-body {
-    background-color: #588aa9;
-  }
+    border-radius: 1rem;
 
-  .card-title a {
-    color: #fff;
-    text-decoration: none;
-  }
+    &:hover img {
+      opacity: 0.7 !important;
+      transition: all 1s ease;
+    }
 
-  .card-title a:hover {
-    color: #000;
-    text-decoration: none;
-  }
+    .card-title a {
+      color: #fff;
+      text-decoration: none;
 
-  .gatsby-image-wrapper:hover img {
-    opacity: 0.7 !important;
-    transition: all 1s ease;
-  }
+      &:hover{
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    .card-body {
+      background-color: #588aa9;
+    }
+Ottimi  }
 `
 
 export default Home
