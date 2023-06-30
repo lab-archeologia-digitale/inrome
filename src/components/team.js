@@ -1,59 +1,34 @@
 import * as React from "react"
 import { Card, Row, Col, Container } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-const persons = [
-  {
-    name: "Barbara Borg",
-    img: "../images/borg.png",
-    role: "PI",
-    position: "Professor of Archaeology",
-    insititution: "Scuola Normale Superiore",
-    color: "#a95862",
-  },
-  {
-    name: "Barbara Borg",
-    img: "../images/borg.png",
-    role: "PI",
-    position: "Professor of Archaeology",
-    insititution: "Scuola Normale Superiore",
-    color: "#a99e58",
-  },
-  {
-    name: "Barbara Borg",
-    img: "../images/borg.png",
-    role: "PI",
-    position: "Professor of Archaeology",
-    insititution: "Scuola Normale Superiore",
-    color: "#a95862",
-  },
-  {
-    name: "Barbara Borg",
-    img: "../images/borg.png",
-    role: "PI",
-    position: "Professor of Archaeology",
-    insititution: "Scuola Normale Superiore",
-  },
-  {
-    name: "Barbara Borg",
-    img: "../images/borg.png",
-    role: "PI",
-    position: "Professor of Archaeology",
-    insititution: "Scuola Normale Superiore",
-    color: "#a95862",
-  },
-]
 
 const Team = () => {
   const data = useStaticQuery(graphql`
     {
       directus {
-        articles(limit: 1, filter: {slug: {_eq: "team"}}) {
+        intro: articles(limit: 1, filter: {slug: {_eq: "team"}}) {
           id
           title
           slug
           summary
           text
+        }
+        team:articles(filter: {tags: {_contains: "team-members"}}) {
+          id
+          title
+          slug
+          summary
+          tags
+          image {
+            id
+            imageFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
         }
       }
     }
@@ -63,28 +38,24 @@ const Team = () => {
       <section className="py-5">
         <Container>
           <Row>
-            <h1>{data.directus.articles[0].title}</h1>
+            <h1>{data.directus.intro[0].title}</h1>
             <div
               dangerouslySetInnerHTML={{
-                __html: data.directus.articles[0].text,
+                __html: data.directus.intro[0].text,
               }}
             />
           </Row>
         </Container>
       </section>
+
       <section className="py-5 text-center">
         <Container>
           <Row>
-            {persons.map(person => {
+            {data.directus.team.map(person => {
               return (
                 <Col xs="6" lg="3" className="py-3">
                   <Card>
-                    <Card.Img
-                      variant="bottom"
-                      src={person.img}
-                      as="img"
-                      alt={`${person.position}: ${person.name}`}
-                    />
+                    <GatsbyImage image={person.image.imageFile.childImageSharp.gatsbyImageData} />
                     <Card.Body
                       style={{
                         color: "#ffffff",
@@ -92,12 +63,12 @@ const Team = () => {
                       }}
                       className={person.color}
                     >
-                      <Card.Title>{person.name}</Card.Title>
-                      <Card.Text className="text-center">
-                        {person.role}
-                      </Card.Text>
-                      <Card.Text className="text-center">
-                        {person.position} <br /> {person.insititution}
+                      <Card.Title>{person.title}</Card.Title>
+                      <Card.Text 
+                        className="text-center" 
+                        dangerouslySetInnerHTML={{ 
+                          __html: person.summary.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br />$2') 
+                          }}>
                       </Card.Text>
                     </Card.Body>
                   </Card>
