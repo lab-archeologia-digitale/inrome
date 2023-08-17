@@ -64,7 +64,7 @@ const Header = styled.section`
   }
   .header-title {
     color: #fff;
-    font-family: "Cinzel";
+    font-family: "Roboto";
     font-size: 1.2rem;
   }
 `

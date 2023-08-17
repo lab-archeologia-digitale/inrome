@@ -73,11 +73,6 @@ function MenuPage() {
                 Useful Links
               </Nav.Link>
             </div>
-            <div className="containerLink">
-              <Nav.Link href={withPrefix("/search")} className="nav-item my-2">
-                Search
-              </Nav.Link>
-            </div>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -112,7 +107,7 @@ const Menu = styled.section`
 
   .nav-link {
     padding: 0;
-    width: 100px;
+    width: 110px;
     text-align: center;
   }
 
