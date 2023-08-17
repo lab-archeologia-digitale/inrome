@@ -10,7 +10,7 @@ const Home = () => {
   const data = useStaticQuery(graphql`
     {
       directus {
-        articles(limit: 1, filter: {slug: {_eq: "home"}}) {
+        articles(limit: 1, filter: { slug: { _eq: "home" } }) {
           id
           title
           slug
@@ -110,16 +110,16 @@ const Wrapper = styled.section`
       color: #fff;
       text-decoration: none;
 
-      &:hover{
+      &:hover {
         color: #000;
         text-decoration: none;
       }
     }
 
     .card-body {
-      background-color: #588aa9;
+      background-color: rgb(169, 158, 88);
     }
-}
+  }
 `
 
 export default Home

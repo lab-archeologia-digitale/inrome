@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `INRome - The Inscribed city urban structures and interaction in imperial ROME`,
+    title: `The INscribed city: urban structures and interaction in imperial ROME`,
     description: `The Inscribed city urban structures and interaction in imperial ROME`,
     author: `@iacopini`,
     copyright: `© Scuola Normale Superiore 2023`,

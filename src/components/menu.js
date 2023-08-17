@@ -27,7 +27,8 @@ function MenuPage() {
                 Team
               </Nav.Link>
             </div>
-            <div className="containerLink">
+
+            {/* <div className="containerLink">
               <NavDropdown
                 title="Partners"
                 id="basic-nav-dropdown"
@@ -43,7 +44,7 @@ function MenuPage() {
                   SITAR
                 </NavDropdown.Item>
               </NavDropdown>
-            </div>
+            </div> */}
             <div className="containerLink">
               <Nav.Link href="#link" className="nav-item my-2">
                 News
@@ -65,6 +66,16 @@ function MenuPage() {
             <div className="containerLink">
               <Nav.Link href={withPrefix("/credits")} className="nav-item my-2">
                 Credits
+              </Nav.Link>
+            </div>
+            <div className="containerLink">
+              <Nav.Link href={withPrefix("/link")} className="nav-item my-2">
+                Useful Links
+              </Nav.Link>
+            </div>
+            <div className="containerLink">
+              <Nav.Link href={withPrefix("/search")} className="nav-item my-2">
+                Search
               </Nav.Link>
             </div>
           </Nav>
