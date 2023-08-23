@@ -98,7 +98,7 @@ const Footer = styled.section`
   .footer-title {
     color: #fff;
     font-family: "Cinzel";
-    font-size: 1.2rem;
+    font-size: 0.6rem;
   }
 `
 
