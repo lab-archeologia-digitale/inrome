@@ -15,51 +15,17 @@ function Slide() {
             alt="InRome"
           />
           <Carousel.Caption>
-            <h3>LORE IPSUM DOLOR SIT AMET</h3>
-            <span className="subTitle">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
-            </span>
-            <br></br>
-            <button className="btn btn-primary m-4">LINK</button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <StaticImage
-            src="../images/slide1.jpg"
-            className="d-block w-100"
-            formats={["AUTO", "WEBP"]}
-            alt="InRome"
-          />
-          <Carousel.Caption>
-            <h3>LORE IPSUM DOLOR SIT AMET</h3>
-            <span className="subTitle">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
-            </span>
-            <br></br>
-            <button className="btn btn-primary m-4">LINK</button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <StaticImage
-            src="../images/slide1.jpg"
-            className="d-block w-100"
-            formats={["AUTO", "WEBP"]}
-            alt="InRome"
-          />
-          <Carousel.Caption>
-            <h3>LORE IPSUM DOLOR SIT AMET</h3>
-            <span className="subTitle">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
-            </span>
-            <br></br>
-            <button className="btn btn-primary m-4">LINK</button>
+            <Styledh3>The website is under construction</Styledh3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </Slider>
   )
 }
-
+const Styledh3 = styled.h3`
+  background: rgba(0,0,0,.5);
+  padding: 2rem;
+`
 //style
 const Slider = styled.section`
   .slide {
