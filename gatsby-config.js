@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `The INscribed city: urban structures and interaction in imperial ROME`,
     description: `The Inscribed city urban structures and interaction in imperial ROME`,
-    author: `@iacopini`,
-    copyright: `© Scuola Normale Superiore 2023`,
+    author: `iacopini`,
+    copyright: `Scuola Normale Superiore 2023`,
   },
-  pathPrefix: `/inrome`,
+  pathPrefix: `/`,
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -41,13 +41,11 @@ module.exports = {
     {
       resolve: "@directus/gatsby-source-directus",
       options: {
-        url: `https://inrome.bdus.cloud`, // Fill with your Directus instance address
+        // url: `https://inrome.bdus.cloud`, // Vecchio URL
+        url: `https://inrome.sns.it/db/`, // Nuovo URL
         auth: {
-          token: "kLomRx_qlB0hfdr0g9w0DxC1TD3ccSGS", // You can use a static token from an user
-
-          // Or you can use the credentials of an user
-          // email: "johndoe@directus.cloud",
-          // password: "mysecretpassword",
+          // token: "kLomRx_qlB0hfdr0g9w0DxC1TD3ccSGS", // del vecchio URL
+          token: "NI0Wwfl94XnFuAxpg5aJMsp94Dclw1Fg", // del nuovo URL
         },
       },
     },
