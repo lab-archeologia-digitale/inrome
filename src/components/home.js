@@ -10,7 +10,7 @@ const Home = () => {
   const data = useStaticQuery(graphql`
     {
       directus {
-        articles(limit: 1, filter: { slug: { _eq: "home" } }) {
+        cms_articles(limit: 1, filter: { slug: { _eq: "home" } }) {
           id
           title
           slug
@@ -25,10 +25,10 @@ const Home = () => {
       <section className="py-5">
         <Container>
           <Row>
-            <h1>{data.directus.articles[0].title}</h1>
+            <h1>{data.directus.cms_articles[0].title}</h1>
             <div
               dangerouslySetInnerHTML={{
-                __html: data.directus.articles[0].text,
+                __html: data.directus.cms_articles[0].text,
               }}
             />
           </Row>

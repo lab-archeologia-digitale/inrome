@@ -42,7 +42,7 @@ module.exports = {
       resolve: "@directus/gatsby-source-directus",
       options: {
         // url: `https://inrome.bdus.cloud`, // Vecchio URL
-        url: `https://inrome.sns.it/db/`, // Nuovo URL
+        url: `https://inrome.sns.it/db`, // Nuovo URL
         auth: {
           // token: "kLomRx_qlB0hfdr0g9w0DxC1TD3ccSGS", // del vecchio URL
           token: "NI0Wwfl94XnFuAxpg5aJMsp94Dclw1Fg", // del nuovo URL

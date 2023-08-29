@@ -7,14 +7,14 @@ const Team = () => {
   const data = useStaticQuery(graphql`
     {
       directus {
-        intro: articles(limit: 1, filter: { slug: { _eq: "team" } }) {
+        intro: cms_articles(limit: 1, filter: { slug: { _eq: "team" } }) {
           id
           title
           slug
           summary
           text
         }
-        team: articles(filter: { tags: { _contains: "team-members" } }) {
+        team: cms_articles(filter: { tags: { _contains: "team-members" } }) {
           id
           title
           slug
