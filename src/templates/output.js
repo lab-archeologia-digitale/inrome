@@ -33,7 +33,7 @@ export default function Article({ data, classes, pageContext }) {
           <section className="py-5 text-center news">
             <Container>
               <Row>
-                <Col sm={4} xs={12}>
+                <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
                       src="../images/progetti.png"
@@ -50,7 +50,7 @@ export default function Article({ data, classes, pageContext }) {
                     </div>
                   </Card>
                 </Col>
-                <Col sm={4} xs={12}>
+                <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
                       src="../images/news.png"
@@ -66,7 +66,25 @@ export default function Article({ data, classes, pageContext }) {
                     </div>
                   </Card>
                 </Col>
-                <Col sm={4} xs={12}>
+              </Row>
+              <Row>
+                <Col sm={6} xs={12}>
+                  <Card>
+                    <StaticImage
+                      src="../images/output.png"
+                      formats={["AUTO", "WEBP"]}
+                      alt="output"
+                      className="card-img-top"
+                      height={300}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        <a href="/">Outputs</a>
+                      </h5>
+                    </div>
+                  </Card>
+                </Col>
+                <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
                       src="../images/output.png"
