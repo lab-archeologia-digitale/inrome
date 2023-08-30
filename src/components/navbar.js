@@ -58,7 +58,9 @@ const Navbar = ({ siteTitle }) => {
         </Col>
         <Col sm={1} xs={12} className="d-flex justify-content-end logoMobile">
           <div>
-            <span>IT - EN</span>
+            <span>
+              <a href="/">IT</a> - <a href="/">EN</a>
+            </span>
           </div>
         </Col>
       </Row>
@@ -84,6 +86,14 @@ const Header = styled.section`
     background-color: #3e281c;
     width: 100%;
     margin: 0;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(169, 158, 88);
+    text-decoration: none;
   }
 `
 
