@@ -56,8 +56,8 @@ const Navbar = ({ siteTitle }) => {
         <Col sm={11} xs={12} className="d-flex justify-content-start p-0">
           <div></div>
         </Col>
-        <Col sm={1} xs={12} className="d-flex justify-content-end logoMobile">
-          <div>
+        <Col sm={1} xs={12} className="d-flex justify-content-end lang-int">
+          <div className="lang-int">
             <span>
               <a href="/">IT</a> - <a href="/">EN</a>
             </span>
@@ -86,7 +86,10 @@ const Header = styled.section`
     background-color: #3e281c;
     width: 100%;
     margin: 0;
+    min-height: auto;
+    text-align: center;
   }
+
   a {
     color: #fff;
     text-decoration: none;
