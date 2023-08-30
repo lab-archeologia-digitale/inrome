@@ -51,6 +51,17 @@ const Navbar = ({ siteTitle }) => {
           </Col>
         </Row>
       </Container>
+
+      <Row className="lang px-1 pt-1">
+        <Col sm={11} xs={12} className="d-flex justify-content-start p-0">
+          <div></div>
+        </Col>
+        <Col sm={1} xs={12} className="d-flex justify-content-end logoMobile">
+          <div>
+            <span>IT - EN</span>
+          </div>
+        </Col>
+      </Row>
     </Header>
   )
 }
@@ -59,13 +70,20 @@ const Navbar = ({ siteTitle }) => {
 const Header = styled.section`
   .container-fluid {
     background-color: #8b5a40;
-    border-bottom: #3e281c solid 1em !important;
     min-height: auto;
   }
   .header-title {
     color: #fff;
     font-family: "Roboto";
     font-size: 1.2rem;
+  }
+
+  .lang {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: #3e281c;
+    width: 100%;
+    margin: 0;
   }
 `
 
