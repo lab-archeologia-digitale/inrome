@@ -27,31 +27,13 @@ function MenuPage() {
                 Team
               </Nav.Link>
             </div>
-
-            {/* <div className="containerLink">
-              <NavDropdown
-                title="Partners"
-                id="basic-nav-dropdown"
-                className="nav-item my-2"
-              >
-                <NavDropdown.Item href="#action/3.1" className="nav-item my-2">
-                  Sapienza
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2" className="nav-item my-2">
-                  AIT
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" className="nav-item my-2">
-                  SITAR
-                </NavDropdown.Item>
-              </NavDropdown>
-            </div> */}
             <div className="containerLink">
               <Nav.Link href="#link" className="nav-item my-2">
                 News
               </Nav.Link>
             </div>
             <div className="containerLink">
-              <Nav.Link href={withPrefix("/outputs")} className="nav-item my-2">
+              <Nav.Link href="#output" className="nav-item my-2">
                 Outputs
               </Nav.Link>
             </div>
