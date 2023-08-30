@@ -2,7 +2,6 @@ import React from "react"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Slide from "../components/slide"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
@@ -13,9 +12,6 @@ export default function Article({ data, classes, pageContext }) {
 
   return (
     <Layout>
-      <div className="slide">
-        <Slide />
-      </div>
       <div>
         <section className="py-5">
           <Container>

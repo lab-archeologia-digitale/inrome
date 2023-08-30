@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default function Article({ data, classes, pageContext }) {
-  const article = data.directus.cms_articles[0];  
-  const lang = pageContext.lang;
-  console.log(lang);
+  const article = data.directus.cms_articles[0]
+  const lang = pageContext.lang
+  console.log(lang)
 
   return (
     <Layout>
@@ -14,10 +14,10 @@ export default function Article({ data, classes, pageContext }) {
         <section className="py-5">
           <Container>
             <Row>
-              <h1>{ lang === 'it' ? article.title_it : article.title }</h1>
+              <h1>{lang === "it" ? article.title_it : article.title}</h1>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: (lang === 'it' ? article.text_it : article.text),
+                  __html: lang === "it" ? article.text_it : article.text,
                 }}
               />
             </Row>
