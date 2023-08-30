@@ -2,7 +2,6 @@ import React from "react"
 import { withPrefix } from "gatsby"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
-import NavDropdown from "react-bootstrap/NavDropdown"
 import styled from "styled-components"
 
 function MenuPage() {
@@ -33,7 +32,7 @@ function MenuPage() {
               </Nav.Link>
             </div>
             <div className="containerLink">
-              <Nav.Link href="#output" className="nav-item my-2">
+              <Nav.Link href={withPrefix("/outputs")} className="nav-item my-2">
                 Outputs
               </Nav.Link>
             </div>
