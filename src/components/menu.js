@@ -3,57 +3,40 @@ import { withPrefix } from "gatsby"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
 function MenuPage() {
+  const data = useStaticQuery(graphql`
+    {
+      directus {
+        menu: cms_articles(
+          sort: "id"
+          filter: { tags: { _contains: "home-item" } }
+        ) {
+          title
+          slug
+        }
+      }
+    }
+  `)
   return (
     <Menu>
       <Navbar expand="lg px-4">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" style={{}}>
-            <div className="containerLink">
-              <Nav.Link href={withPrefix("/")} className="nav-item my-2">
-                Home
-              </Nav.Link>
-            </div>
-            <div className="containerLink">
-              <Nav.Link href={withPrefix("/about")} className="nav-item my-2">
-                About
-              </Nav.Link>
-            </div>
-            <div className="containerLink">
-              <Nav.Link href={withPrefix("/team")} className="nav-item my-2">
-                Team
-              </Nav.Link>
-            </div>
-            <div className="containerLink">
-              <Nav.Link href="#link" className="nav-item my-2">
-                News
-              </Nav.Link>
-            </div>
-            <div className="containerLink">
-              <Nav.Link href={withPrefix("/outputs")} className="nav-item my-2">
-                Outputs
-              </Nav.Link>
-            </div>
-            <div className="containerLink">
-              <Nav.Link
-                href={withPrefix("/contacts")}
-                className="nav-item my-2"
-              >
-                Contact
-              </Nav.Link>
-            </div>
-            <div className="containerLink">
-              <Nav.Link href={withPrefix("/credits")} className="nav-item my-2">
-                Credits
-              </Nav.Link>
-            </div>
-            <div className="containerLink">
-              <Nav.Link href={withPrefix("/link")} className="nav-item my-2">
-                Useful Links
-              </Nav.Link>
-            </div>
+            {data.directus.menu.map((menuItem, index) => {
+              return (
+                <div className="containerLink">
+                  <Nav.Link
+                    href={withPrefix(`en/${menuItem.slug}`)}
+                    className="nav-item my-2"
+                  >
+                    {menuItem.title}
+                  </Nav.Link>
+                </div>
+              )
+            })}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
