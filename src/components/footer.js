@@ -9,7 +9,7 @@ const FooterPage = () => {
     <Footer>
       <Container fluid>
         <Row className="px-5 pt-5">
-          <Col sm={4} xs={12} className="d-flex ">
+          <Col sm={2} xs={12} className="d-flex ">
             <div>
               <a href="/">
                 <StaticImage
@@ -24,29 +24,7 @@ const FooterPage = () => {
               <p className="footer-title">© Scuola Normale Superiore</p>
             </div>
           </Col>
-          <Col sm={4} xs={12} className="d-flex">
-            <a href="/" className="footer-link">
-              SITE MAP{" "}
-            </a>
-            <a href={withPrefix("/privacy")} className="footer-link">
-              {" "}
-              PRIVACY POLICIES{" "}
-            </a>
-            <a href={withPrefix("/contacts")} className="footer-link">
-              CONTACT{" "}
-            </a>
-          </Col>
-          <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a href="/">
-              <StaticImage
-                src="../images/erc-logo.svg"
-                height={71}
-                quality={30}
-                formats={["AUTO", "WEBP"]}
-                alt="erc-logo"
-              />
-            </a>
-          </Col>
+
           <Col sm={2} xs={6} className="d-flex justify-content-end">
             <a href="/">
               <StaticImage
@@ -58,6 +36,59 @@ const FooterPage = () => {
               />
             </a>
           </Col>
+          <Col sm={2} xs={6} className="d-flex justify-content-end">
+            <a href="/">
+              <StaticImage
+                src="../images/sapienza.png"
+                height={71}
+                quality={30}
+                formats={["AUTO", "WEBP"]}
+                alt="Sapienza Università di Roma"
+              />
+            </a>
+          </Col>
+          <Col sm={2} xs={6} className="d-flex justify-content-end">
+            <a href="/">
+              <StaticImage
+                src="../images/ait.png"
+                height={71}
+                quality={30}
+                formats={["AUTO", "WEBP"]}
+                alt="AIT"
+              />
+            </a>
+          </Col>
+          <Col sm={2} xs={6} className="d-flex justify-content-end">
+            <a href="/">
+              <StaticImage
+                src="../images/eu-erc.png"
+                height={71}
+                quality={30}
+                formats={["AUTO", "WEBP"]}
+                alt="EU"
+              />
+            </a>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={4} xs={12} className="d-flex justify-content-start"></Col>
+          <Col
+            sm={4}
+            xs={12}
+            className="d-flex Link-footer justify-content-center"
+          >
+            <a href="/" className="footer-link">
+              SITE MAP{" "}
+            </a>
+            <a href={withPrefix("/privacy")} className="footer-link">
+              {" "}
+              PRIVACY POLICIES{" "}
+            </a>
+            <a href={withPrefix("/contacts")} className="footer-link">
+              CONTACT{" "}
+            </a>
+          </Col>
+          <Col sm={4} xs={12} className="d-flex justify-content-end"></Col>
         </Row>
       </Container>
     </Footer>
@@ -99,6 +130,11 @@ const Footer = styled.section`
     color: #fff;
     font-family: "Cinzel";
     font-size: 0.6rem;
+  }
+  .Link-footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
   }
 `
 
