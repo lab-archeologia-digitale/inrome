@@ -68,7 +68,7 @@ const FooterPage = () => {
 const Footer = styled.section`
   .container-fluid {
     background-color: #8b5a40;
-    border-bottom: #3e281c solid 3rem;
+    border-bottom: #3e281c solid 1rem;
     min-height: auto;
   }
 
