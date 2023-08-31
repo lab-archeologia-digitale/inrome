@@ -28,7 +28,10 @@ function MenuPage() {
             {data.directus.menu.map((menuItem, index) => {
               return (
                 <div className="containerLink">
-                  <Nav.Link href={withPrefix("/")} className="nav-item my-2">
+                  <Nav.Link
+                    href={withPrefix(`en/${menuItem.slug}`)}
+                    className="nav-item my-2"
+                  >
                     {menuItem.title}
                   </Nav.Link>
                 </div>
