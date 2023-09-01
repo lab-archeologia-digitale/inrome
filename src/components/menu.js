@@ -31,10 +31,10 @@ function MainMenu({currentLang}) {
               return (
                 <div className="containerLink" key={index}>
                   <Nav.Link
-                    href={withPrefix(`${currentLang}/${menuItem.slug}`)}
+                    href={withPrefix(`${currentLang}/${menuItem.slug === 'home' ? '' : menuItem.slug}`)}
                     className="nav-item my-2"
                   >
-                    { (currentLang === 'it') ? menuItem.title_it : menuItem.title_it}
+                    { (currentLang === 'it') ? menuItem.title_it : menuItem.title}
                   </Nav.Link>
                 </div>
               )

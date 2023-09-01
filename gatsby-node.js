@@ -27,7 +27,7 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.directus.cms_articles.forEach(art => {
     actions.createPage({
-      path: `it/${art.slug}`,
+      path: `it/${art.slug === 'home' ? '' : art.slug}`,
       component: require.resolve(`./src/templates/${art.template || `article` }.js`),
       context: {
         slug: art.slug,
@@ -35,7 +35,7 @@ exports.createPages = async function ({ actions, graphql }) {
       },
     })
     actions.createPage({
-      path: `en/${art.slug}`,
+      path: `en/${art.slug === 'home' ?  '' : art.slug}`,
       component: require.resolve(`./src/templates/${art.template || `article` }.js`),
       context: {
         slug: art.slug,
