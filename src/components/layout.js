@@ -7,7 +7,12 @@ import "./layout.scss"
 import FooterPage from "./footer"
 import MainMenu from "../components/menu"
 
-const Layout = ({ children, lang }) => {
+import { useLocation } from '@reach/router';
+
+const Layout = ({ children }) => {
+
+  const location = useLocation();
+  const lang = location.pathname.includes('/it/') ?  'it' : 'en';
   
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -21,7 +26,7 @@ const Layout = ({ children, lang }) => {
 
   return (
     <div className="container-fluid p-0">
-      <Navbar lang={lang} siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Navbar currentLang={lang} currentPath={location.pathname} siteTitle={data.site.siteMetadata?.title || `Title`} />
       <MainMenu lang={lang} />
       <main>{children}</main>
       <FooterPage />
