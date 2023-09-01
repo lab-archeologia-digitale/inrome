@@ -5,7 +5,7 @@ module.exports = {
     author: `iacopini`,
     copyright: `Scuola Normale Superiore 2023`,
   },
-  pathPrefix: `/`,
+  pathPrefix: `/inrome/`,
   plugins: [
     `gatsby-plugin-image`,
     {
