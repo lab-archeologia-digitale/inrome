@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <div className="container-fluid p-0">
       <Navbar currentLang={lang} currentPath={location.pathname} siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <MainMenu lang={lang} />
+      <MainMenu currentLang={lang} />
       <main>{children}</main>
       <FooterPage />
     </div>

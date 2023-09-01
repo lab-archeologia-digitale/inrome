@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-function MainMenu({lang}) {
+function MainMenu({currentLang}) {
 
   const data = useStaticQuery(graphql`
     {
@@ -15,6 +15,7 @@ function MainMenu({lang}) {
           filter: { tags: { _contains: "home-item" } }
         ) {
           title
+          title_it
           slug
         }
       }
@@ -30,10 +31,10 @@ function MainMenu({lang}) {
               return (
                 <div className="containerLink" key={index}>
                   <Nav.Link
-                    href={withPrefix(`${lang}/${menuItem.slug}`)}
+                    href={withPrefix(`${currentLang}/${menuItem.slug}`)}
                     className="nav-item my-2"
                   >
-                    {menuItem.title}
+                    { (currentLang === 'it') ? menuItem.title_it : menuItem.title_it}
                   </Nav.Link>
                 </div>
               )
