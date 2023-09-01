@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 
 export default function Article({ data, classes, pageContext }) {
   const article = data.directus.cms_articles[0]
-  const lang = pageContext.lang
-
+  const lang = ['it', 'en'].includes(pageContext.lang) ? pageContext.lang : 'en';
+  
   return (
-    <Layout lang={lang}>
+    <Layout>
       <div>
         <section className="py-5">
           <Container>

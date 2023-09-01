@@ -7,8 +7,7 @@ import styled from "styled-components"
 
 export default function Article({ data, classes, pageContext }) {
   const article = data.directus.cms_articles[0]
-  const lang = pageContext.lang
-  console.log(lang)
+  const lang = ['it', 'en'].includes(pageContext.lang) ? pageContext.lang : 'en';
 
   return (
     <Layout>

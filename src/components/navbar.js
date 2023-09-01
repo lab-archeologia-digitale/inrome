@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import { Col, Container, Row } from "react-bootstrap"
 
-const Navbar = ({ siteTitle, lang }) => {
+const Navbar = ({ siteTitle, currentLang, currentPath }) => {
   return (
     <Header>
       <Container fluid>
@@ -59,8 +59,8 @@ const Navbar = ({ siteTitle, lang }) => {
         <Col sm={1} xs={12} className="d-flex justify-content-end lang-int">
           <div className="lang-int">
             <span>
-              { lang === 'it' && <span>IT - <a href="/en">EN</a></span> }
-              { lang === 'en' && <span><a href="/it">IT</a> - EN</span> }
+              { currentLang === 'it' && <span>IT - <a href={ currentPath.replace('/it/', '/en/') }>EN</a></span> }
+              { currentLang === 'en' && <span><a href={ currentPath.replace('/en/', '/it/') }>IT</a> - EN</span> }
             </span>
           </div>
         </Col>
