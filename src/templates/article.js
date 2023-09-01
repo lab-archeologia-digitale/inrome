@@ -6,10 +6,9 @@ import Layout from "../components/layout"
 export default function Article({ data, classes, pageContext }) {
   const article = data.directus.cms_articles[0]
   const lang = pageContext.lang
-  console.log(lang)
 
   return (
-    <Layout>
+    <Layout lang={lang}>
       <div>
         <section className="py-5">
           <Container>

@@ -5,7 +5,8 @@ import Navbar from "react-bootstrap/Navbar"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-function MenuPage() {
+function MainMenu({lang}) {
+
   const data = useStaticQuery(graphql`
     {
       directus {
@@ -27,9 +28,9 @@ function MenuPage() {
           <Nav className="me-auto" style={{}}>
             {data.directus.menu.map((menuItem, index) => {
               return (
-                <div className="containerLink">
+                <div className="containerLink" key={index}>
                   <Nav.Link
-                    href={withPrefix(`en/${menuItem.slug}`)}
+                    href={withPrefix(`${lang}/${menuItem.slug}`)}
                     className="nav-item my-2"
                   >
                     {menuItem.title}
@@ -97,4 +98,4 @@ const Menu = styled.section`
   }
 `
 
-export default MenuPage
+export default MainMenu;
