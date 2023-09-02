@@ -115,12 +115,12 @@ const Team = () => {
                 return (
                   <Col xs="6" lg="3" className="py-3" key={index}>
                     <Card>
-                      {/* <GatsbyImage
+                      <GatsbyImage
                         image={
                           person.image.imageFile.childImageSharp.gatsbyImageData
                         }
                         alt={person.title}
-                      /> */}
+                      />
                       <Card.Body
                         style={{
                           color: "#ffffff",
@@ -152,12 +152,12 @@ const Team = () => {
                 return (
                   <Col xs="6" lg="3" className="py-3" key={index}>
                     <Card>
-                      {/* <GatsbyImage
+                      <GatsbyImage
                         image={
                           person.image.imageFile.childImageSharp.gatsbyImageData
                         }
                         alt={person.title}
-                      /> */}
+                      />
                       <Card.Body
                         style={{
                           color: "#ffffff",
@@ -189,12 +189,12 @@ const Team = () => {
                 return (
                   <Col xs="6" lg="3" className="py-3" key={index}>
                     <Card>
-                      {/* <GatsbyImage
+                      <GatsbyImage
                         image={
                           person.image.imageFile.childImageSharp.gatsbyImageData
                         }
                         alt={person.title}
-                      /> */}
+                      />
                       <Card.Body
                         style={{
                           color: "#ffffff",
