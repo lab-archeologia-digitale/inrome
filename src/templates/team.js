@@ -211,40 +211,6 @@ const Team = () => {
             </Row>
             <Row>
               <h2>Advisory Board </h2>
-              {data.directus.adb.map((person, index) => {
-                return (
-                  <Col xs="6" lg="3" className="py-3" key={index}>
-                    <Card>
-                      <GatsbyImage
-                        image={
-                          person.image.imageFile.childImageSharp.gatsbyImageData
-                        }
-                        alt={person.title}
-                      />
-                      <Card.Body
-                        style={{
-                          color: "#ffffff",
-                          backgroundColor: person.color ?? "rgb(187, 187, 187)",
-                        }}
-                        className={person.color}
-                      >
-                        <Card.Title className="border-bottom">
-                          {person.title}
-                        </Card.Title>
-                        <Card.Text
-                          className="text-center"
-                          dangerouslySetInnerHTML={{
-                            __html: person.summary.replace(
-                              /([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
-                              "$1<br />$2"
-                            ),
-                          }}
-                        ></Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                )
-              })}
             </Row>
           </Container>
         </section>
