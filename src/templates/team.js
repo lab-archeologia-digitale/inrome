@@ -2,7 +2,7 @@ import React from "react"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import Layout from "../components/layout"
 import { useStaticQuery, graphql } from "gatsby"
-/* import { GatsbyImage } from "gatsby-plugin-image"*/
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Team = () => {
   const data = useStaticQuery(graphql`
@@ -78,12 +78,12 @@ const Team = () => {
                 return (
                   <Col xs="6" lg="3" className="py-3" key={index}>
                     <Card>
-                      {/* <GatsbyImage
+                      <GatsbyImage
                         image={
                           person.image.imageFile.childImageSharp.gatsbyImageData
                         }
                         alt={person.title}
-                      /> */}
+                      />
                       <Card.Body
                         style={{
                           color: "#ffffff",
