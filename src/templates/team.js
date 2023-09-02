@@ -2,7 +2,7 @@ import React from "react"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import Layout from "../components/layout"
 import { useStaticQuery, graphql } from "gatsby"
-/* import { GatsbyImage } from "gatsby-plugin-image"*/
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Team = () => {
   const data = useStaticQuery(graphql`
@@ -16,19 +16,21 @@ const Team = () => {
           text
           tags
         }
-        team: cms_articles(filter: { tags: { _contains: "team-members" } }) {
-          id
-          title
-          slug
-          summary
-          tags
-        }
+
         sns: cms_articles(filter: { tags: { _contains: "sns" } }) {
           id
           title
           slug
           summary
           tags
+          image {
+            id
+            imageFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
         }
         sapienza: cms_articles(filter: { tags: { _contains: "sapienza" } }) {
           id
@@ -36,6 +38,14 @@ const Team = () => {
           slug
           summary
           tags
+          image {
+            id
+            imageFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
         }
         ait: cms_articles(filter: { tags: { _contains: "ait" } }) {
           id
@@ -43,6 +53,14 @@ const Team = () => {
           slug
           summary
           tags
+          image {
+            id
+            imageFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
         }
         adb: cms_articles(filter: { tags: { _contains: "adb" } }) {
           id
@@ -50,6 +68,14 @@ const Team = () => {
           slug
           summary
           tags
+          image {
+            id
+            imageFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
         }
       }
     }
@@ -78,12 +104,12 @@ const Team = () => {
                 return (
                   <Col xs="6" lg="3" className="py-3" key={index}>
                     <Card>
-                      {/* <GatsbyImage
+                      <GatsbyImage
                         image={
                           person.image.imageFile.childImageSharp.gatsbyImageData
                         }
                         alt={person.title}
-                      /> */}
+                      />
                       <Card.Body
                         style={{
                           color: "#ffffff",

@@ -27,20 +27,58 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.directus.cms_articles.forEach(art => {
     actions.createPage({
-      path: `it/${art.slug === 'home' ? '' : art.slug}`,
-      component: require.resolve(`./src/templates/${art.template || `article` }.js`),
+      path: `it/${art.slug === "home" ? "" : art.slug}`,
+      component: require.resolve(
+        `./src/templates/${art.template || `article`}.js`
+      ),
       context: {
         slug: art.slug,
         lang: "it",
       },
     })
     actions.createPage({
-      path: `en/${art.slug === 'home' ?  '' : art.slug}`,
-      component: require.resolve(`./src/templates/${art.template || `article` }.js`),
+      path: `en/${art.slug === "home" ? "" : art.slug}`,
+      component: require.resolve(
+        `./src/templates/${art.template || `article`}.js`
+      ),
       context: {
         slug: art.slug,
         lang: "en",
       },
     })
+  })
+}
+
+const { createRemoteFileNode } = require("gatsby-source-filesystem")
+
+exports.createResolvers = async ({
+  actions,
+  cache,
+  createNodeId,
+  createResolvers,
+  store,
+  reporter,
+}) => {
+  const { createNode } = actions
+
+  await createResolvers({
+    Directus_directus_files: {
+      imageFile: {
+        type: "File",
+        async resolve(source) {
+          if (!source || !source.id) {
+            return null
+          }
+          return await createRemoteFileNode({
+            url: encodeURI(`https://inrome.sns.it/db/assets/${source.id}`),
+            store,
+            cache,
+            createNode,
+            createNodeId,
+            reporter,
+          })
+        },
+      },
+    },
   })
 }
