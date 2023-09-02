@@ -8,21 +8,30 @@ const Team = () => {
   const data = useStaticQuery(graphql`
     {
       directus {
-        intro: cms_articles(limit: 1, filter: { slug: { _eq: "team" } }) {
+        intro: cms_articles(
+          limit: 1
+          sort: "order"
+          filter: { slug: { _eq: "team" } }
+        ) {
           id
           title
           slug
           summary
           text
           tags
+          order
         }
 
-        sns: cms_articles(filter: { tags: { _contains: "sns" } }) {
+        sns: cms_articles(
+          sort: "order"
+          filter: { tags: { _contains: "sns" } }
+        ) {
           id
           title
           slug
           summary
           tags
+          order
           image {
             id
             imageFile {
@@ -32,12 +41,16 @@ const Team = () => {
             }
           }
         }
-        sapienza: cms_articles(filter: { tags: { _contains: "sapienza" } }) {
+        sapienza: cms_articles(
+          sort: "order"
+          filter: { tags: { _contains: "sapienza" } }
+        ) {
           id
           title
           slug
           summary
           tags
+          order
           image {
             id
             imageFile {
@@ -47,12 +60,16 @@ const Team = () => {
             }
           }
         }
-        ait: cms_articles(filter: { tags: { _contains: "ait" } }) {
+        ait: cms_articles(
+          sort: "order"
+          filter: { tags: { _contains: "ait" } }
+        ) {
           id
           title
           slug
           summary
           tags
+          order
           image {
             id
             imageFile {
@@ -62,7 +79,10 @@ const Team = () => {
             }
           }
         }
-        adb: cms_articles(filter: { tags: { _contains: "adb" } }) {
+        adb: cms_articles(
+          sort: "order"
+          filter: { tags: { _contains: "adb" } }
+        ) {
           id
           title
           slug
@@ -137,7 +157,7 @@ const Team = () => {
             </Row>
             <Row>
               <h2>Sapienza Università di Roma</h2>
-              {data.directus.sapienza.reverse().map((person, index) => {
+              {data.directus.sapienza.map((person, index) => {
                 return (
                   <Col xs="6" lg="3" className="py-3" key={index}>
                     <Card>
