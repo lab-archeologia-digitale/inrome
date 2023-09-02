@@ -28,8 +28,8 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "prettier": "^2.8.8"
+    "gh-pages": "^6.0.0",
+    "prettier": "^3.0.3"
   },
   "keywords": [
     "gatsby",
@@ -51,11 +51,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r-ichard/gatsby-starter-bootstrap-5.git"
+    "url": "git+https://github.com/lab-archeologia-digitale/inrome.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/lab-archeologia-digitale/inrome/issues"
   },
-  "homepage": "https://github.com/r-ichard/gatsby-starter-bootstrap-5#readme",
+  "homepage": "https://inrome.sns.it/",
   "main": "gatsby-browser.js"
 }
