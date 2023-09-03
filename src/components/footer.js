@@ -26,7 +26,7 @@ const FooterPage = () => {
           </Col>
 
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a href="/">
+            <a href="https://www.sns.it/it" target="_blank" rel="noreferrer">
               <StaticImage
                 src="../images/logo-sns@2x_0.png"
                 height={71}
@@ -37,7 +37,11 @@ const FooterPage = () => {
             </a>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a href="/">
+            <a
+              href="https://www.uniroma1.it/it/pagina-strutturale/home"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StaticImage
                 src="../images/sapienza.png"
                 height={71}
@@ -48,7 +52,11 @@ const FooterPage = () => {
             </a>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a href="/">
+            <a
+              href="https://www.ait.ac.at/en/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StaticImage
                 src="../images/ait.png"
                 height={71}
@@ -59,7 +67,11 @@ const FooterPage = () => {
             </a>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a href="/">
+            <a
+              href="https://erc.europa.eu/homepage"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StaticImage
                 src="../images/eu-erc.png"
                 height={71}

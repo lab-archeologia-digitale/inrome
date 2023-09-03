@@ -25,7 +25,11 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end logoMobile">
             <div>
-              <a href="/">
+              <a
+                href="https://erc.europa.eu/homepage"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <StaticImage
                   src="../images/erc-logo.svg"
                   height={71}
@@ -38,7 +42,7 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end logoMobile">
             <div>
-              <a href="/">
+              <a href="https://www.sns.it/it" target="_blank" rel="noreferrer">
                 <StaticImage
                   src="../images/logo-sns@2x_0.png"
                   height={71}
@@ -59,8 +63,16 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
         <Col sm={1} xs={12} className="d-flex justify-content-end lang-int">
           <div className="lang-int">
             <span>
-              { currentLang === 'it' && <span>IT - <a href={ currentPath.replace('/it/', '/en/') }>EN</a></span> }
-              { currentLang === 'en' && <span><a href={ currentPath.replace('/en/', '/it/') }>IT</a> - EN</span> }
+              {currentLang === "it" && (
+                <span>
+                  IT - <a href={currentPath.replace("/it/", "/en/")}>EN</a>
+                </span>
+              )}
+              {currentLang === "en" && (
+                <span>
+                  <a href={currentPath.replace("/en/", "/it/")}>IT</a> - EN
+                </span>
+              )}
             </span>
           </div>
         </Col>
