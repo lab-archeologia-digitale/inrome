@@ -105,19 +105,28 @@ const Wrapper = styled.section`
       opacity: 0.7 !important;
       transition: all 1s ease;
     }
+  }
 
-    .card-title a {
-      color: #fff;
+  .card-title a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
       text-decoration: none;
-
-      &:hover {
-        color: #000;
-        text-decoration: none;
-      }
     }
+  }
 
-    .card-body {
-      background-color: rgb(169, 158, 88);
+  .card-body {
+    background-color: rgb(169, 158, 88);
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(169, 158, 88);
+      text-decoration: none;
     }
   }
 `
