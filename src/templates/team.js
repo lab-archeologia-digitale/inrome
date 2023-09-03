@@ -150,6 +150,9 @@ const Team = (currentLang, currentPath) => {
                         </Card.Title>
                         <Card.Text
                           className="text-center"
+                          style={{
+                            fontSize: "0.7rem",
+                          }}
                           dangerouslySetInnerHTML={{
                             __html: person.summary.replace(
                               /([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
@@ -195,6 +198,9 @@ const Team = (currentLang, currentPath) => {
                         </Card.Title>
                         <Card.Text
                           className="text-center"
+                          style={{
+                            fontSize: "0.7rem",
+                          }}
                           dangerouslySetInnerHTML={{
                             __html: person.summary.replace(
                               /([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
@@ -240,6 +246,9 @@ const Team = (currentLang, currentPath) => {
                         </Card.Title>
                         <Card.Text
                           className="text-center"
+                          style={{
+                            fontSize: "0.7rem",
+                          }}
                           dangerouslySetInnerHTML={{
                             __html: person.summary.replace(
                               /([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
