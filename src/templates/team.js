@@ -124,7 +124,7 @@ const Team = (currentLang, currentPath) => {
                 <h2>Scuola Normale Superiore</h2>
                 {data.directus.sns.map((person, index) => {
                   return (
-                    <Col xs="6" lg="3" className="py-3" key={index}>
+                    <Col xs="12" lg="3" className="py-3" key={index}>
                       <Card>
                         <GatsbyImage
                           image={
@@ -171,7 +171,7 @@ const Team = (currentLang, currentPath) => {
                 <h2>Sapienza Università di Roma</h2>
                 {data.directus.sapienza.map((person, index) => {
                   return (
-                    <Col xs="6" lg="3" className="py-3" key={index}>
+                    <Col xs="12" lg="3" className="py-3" key={index}>
                       <Card>
                         <GatsbyImage
                           image={
@@ -217,7 +217,7 @@ const Team = (currentLang, currentPath) => {
                 <h2>AIT Austrian Institute of Technology</h2>
                 {data.directus.ait.map((person, index) => {
                   return (
-                    <Col xs="6" lg="3" className="py-3" key={index}>
+                    <Col xs="12" lg="3" className="py-3" key={index}>
                       <Card>
                         <GatsbyImage
                           image={
