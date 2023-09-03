@@ -26,6 +26,15 @@ p {
 main {
   padding-bottom: 20vh;
 }
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(169, 158, 88);
+    text-decoration: none;
+  }
+}
 
 // MOBILE
 @media all and (min-width: 481px) and (max-width: 810px) {
