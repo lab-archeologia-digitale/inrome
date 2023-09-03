@@ -133,7 +133,7 @@ const Team = (currentLang, currentPath) => {
                       <Card.Body
                         style={{
                           color: "#ffffff",
-                          backgroundColor: person.color ?? "rgb(0, 90, 116)",
+                          backgroundColor: person.color ?? "rgb(169, 158, 88)",
                         }}
                         className={person.color}
                       >
@@ -153,7 +153,7 @@ const Team = (currentLang, currentPath) => {
                           dangerouslySetInnerHTML={{
                             __html: person.summary.replace(
                               /([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
-                              "$1<br />$2"
+                              "$1<br />$2",
                             ),
                           }}
                         ></Card.Text>
@@ -198,7 +198,7 @@ const Team = (currentLang, currentPath) => {
                           dangerouslySetInnerHTML={{
                             __html: person.summary.replace(
                               /([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
-                              "$1<br />$2"
+                              "$1<br />$2",
                             ),
                           }}
                         ></Card.Text>
@@ -243,7 +243,7 @@ const Team = (currentLang, currentPath) => {
                           dangerouslySetInnerHTML={{
                             __html: person.summary.replace(
                               /([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
-                              "$1<br />$2"
+                              "$1<br />$2",
                             ),
                           }}
                         ></Card.Text>
