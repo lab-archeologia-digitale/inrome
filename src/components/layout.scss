@@ -74,6 +74,9 @@ main {
     text-align: center;
     width: 100%;
   }
+  .card {
+    margin-bottom: 3rem;
+  }
 }
 
 @media all and (min-width: 0px) and (max-width: 320px) {
@@ -114,5 +117,8 @@ main {
   .lang-int {
     text-align: center;
     width: 100%;
+  }
+  .card {
+    margin-bottom: 3rem;
   }
 }
