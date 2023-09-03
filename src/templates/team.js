@@ -261,7 +261,7 @@ const Team = (currentLang, currentPath) => {
                 })}
               </Row>
               <Row>
-                <h2>Advisory Board </h2>
+                <h2>Advisory Board</h2>
               </Row>
             </Container>
           </section>
