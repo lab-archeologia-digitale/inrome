@@ -39,7 +39,13 @@ export default function Article({ data, classes, pageContext }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link to="/blog">
+                        <Link
+                          to="/"
+                          style={{
+                            color: "#ffffff",
+                            textDecoration: "none",
+                          }}
+                        >
                           {lang === "it" ? "Pubblicazioni" : "Pubblication"}
                         </Link>
                       </h5>
@@ -57,7 +63,15 @@ export default function Article({ data, classes, pageContext }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link to="/blog">Software</Link>
+                        <Link
+                          to="/"
+                          style={{
+                            color: "#ffffff",
+                            textDecoration: "none",
+                          }}
+                        >
+                          Software
+                        </Link>
                       </h5>
                     </div>
                   </Card>
@@ -75,7 +89,13 @@ export default function Article({ data, classes, pageContext }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link to="/blog">
+                        <Link
+                          to="/"
+                          style={{
+                            color: "#ffffff",
+                            textDecoration: "none",
+                          }}
+                        >
                           {lang === "it"
                             ? "Pubblicazioni Pre-progetto"
                             : "Pre-project publications of relevance"}
@@ -95,7 +115,13 @@ export default function Article({ data, classes, pageContext }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link to="/blog">
+                        <Link
+                          to="/"
+                          style={{
+                            color: "#ffffff",
+                            textDecoration: "none",
+                          }}
+                        >
                           {lang === "it"
                             ? "Bibliografia"
                             : "Project Bibliography "}
