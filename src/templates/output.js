@@ -31,7 +31,7 @@ export default function Article({ data, classes, pageContext }) {
                 <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
-                      src="../images/progetti.png"
+                      src="../images/biblio.png"
                       formats={["AUTO", "WEBP"]}
                       alt="progetti"
                       className="card-img-top"
@@ -55,7 +55,7 @@ export default function Article({ data, classes, pageContext }) {
                 <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
-                      src="../images/news.png"
+                      src="../images/software.png"
                       formats={["AUTO", "WEBP"]}
                       alt="news"
                       className="card-img-top"
@@ -81,7 +81,7 @@ export default function Article({ data, classes, pageContext }) {
                 <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
-                      src="../images/output.png"
+                      src="../images/biblio.png"
                       formats={["AUTO", "WEBP"]}
                       alt="output"
                       className="card-img-top"
@@ -107,7 +107,7 @@ export default function Article({ data, classes, pageContext }) {
                 <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
-                      src="../images/output.png"
+                      src="../images/biblio2.png"
                       formats={["AUTO", "WEBP"]}
                       alt="output"
                       className="card-img-top"
