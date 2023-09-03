@@ -1,10 +1,10 @@
 import React from "react"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import Layout from "../components/layout"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const Team = () => {
+const Team = (currentLang, currentPath) => {
   const data = useStaticQuery(graphql`
     {
       directus {
@@ -138,7 +138,15 @@ const Team = () => {
                         className={person.color}
                       >
                         <Card.Title className="border-bottom">
-                          {person.title}
+                          <Link
+                            to={`/en/${person.slug}`}
+                            style={{
+                              color: "#ffffff",
+                              textDecoration: "none",
+                            }}
+                          >
+                            {person.title}
+                          </Link>
                         </Card.Title>
                         <Card.Text
                           className="text-center"
@@ -175,7 +183,15 @@ const Team = () => {
                         className={person.color}
                       >
                         <Card.Title className="border-bottom">
-                          {person.title}
+                          <Link
+                            to={`/en/${person.slug}`}
+                            style={{
+                              color: "#ffffff",
+                              textDecoration: "none",
+                            }}
+                          >
+                            {person.title}
+                          </Link>
                         </Card.Title>
                         <Card.Text
                           className="text-center"
@@ -212,7 +228,15 @@ const Team = () => {
                         className={person.color}
                       >
                         <Card.Title className="border-bottom">
-                          {person.title}
+                          <Link
+                            to={`/en/${person.slug}`}
+                            style={{
+                              color: "#ffffff",
+                              textDecoration: "none",
+                            }}
+                          >
+                            {person.title}
+                          </Link>
                         </Card.Title>
                         <Card.Text
                           className="text-center"
