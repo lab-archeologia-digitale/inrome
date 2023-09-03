@@ -27,7 +27,7 @@ export default function Article({ data, classes, pageContext }) {
         <Wrapper>
           <section className="py-5 text-center news">
             <Container>
-              <Row>
+              <Row className="mb-5">
                 <Col sm={6} xs={12}>
                   <Card>
                     <StaticImage
