@@ -4,22 +4,18 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Slide from "../components/slide"
 import Box from "../components/box"
+import { useLocation } from "@reach/router"
 
-export default function Article({
-  data,
-  classes,
-  pageContext,
-  currentLang,
-  currentPath,
-}) {
+export default function Article({ data, classes, pageContext, currentLang }) {
   const article = data.directus.cms_articles[0]
   const lang = ["it", "en"].includes(pageContext.lang) ? pageContext.lang : "en"
-  /* const path = window.location.pathname*/
+  const location = useLocation()
+  const path = location.pathname
 
   return (
     <Layout>
-      <div className="slide"> {currentPath === "/it/" ? <Slide /> : ""} </div>
-      <div className="slide"> {currentPath === "/en/" ? <Slide /> : ""} </div>
+      <div className="slide"> {path === "/it/" ? <Slide /> : ""} </div>
+      <div className="slide"> {path === "/en/" ? <Slide /> : ""} </div>
       <div>
         <section className="py-5">
           <Container>
@@ -33,8 +29,8 @@ export default function Article({
             </Row>
           </Container>
         </section>
-        <div> {currentPath === "/it/" ? <Box /> : ""} </div>
-        <div> {currentPath === "/en/" ? <Box /> : ""} </div>
+        <div> {path === "/it/" ? <Box /> : ""} </div>
+        <div> {path === "/en/" ? <Box /> : ""} </div>
       </div>
     </Layout>
   )
