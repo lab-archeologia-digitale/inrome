@@ -5,16 +5,21 @@ import Layout from "../components/layout"
 import Slide from "../components/slide"
 import Box from "../components/box"
 
-export default function Article({ data, classes, pageContext, currentLang }) {
+export default function Article({
+  data,
+  classes,
+  pageContext,
+  currentLang,
+  currentPath,
+}) {
   const article = data.directus.cms_articles[0]
   const lang = ["it", "en"].includes(pageContext.lang) ? pageContext.lang : "en"
-  const path = window.location.pathname
-  console.log(path)
+  /* const path = window.location.pathname*/
 
   return (
     <Layout>
-      <div className="slide"> {path === "inrome/it/" ? <Slide /> : ""} </div>
-      <div className="slide"> {path === "inrome/en/" ? <Slide /> : ""} </div>
+      <div className="slide"> {currentPath === "/it/" ? <Slide /> : ""} </div>
+      <div className="slide"> {currentPath === "/en/" ? <Slide /> : ""} </div>
       <div>
         <section className="py-5">
           <Container>
@@ -28,8 +33,8 @@ export default function Article({ data, classes, pageContext, currentLang }) {
             </Row>
           </Container>
         </section>
-        <div> {path === "inrome/it/" ? <Box /> : ""} </div>
-        <div> {path === "inrome/en/" ? <Box /> : ""} </div>
+        <div> {currentPath === "/it/" ? <Box /> : ""} </div>
+        <div> {currentPath === "/en/" ? <Box /> : ""} </div>
       </div>
     </Layout>
   )
