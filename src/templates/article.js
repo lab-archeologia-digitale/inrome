@@ -12,8 +12,8 @@ export default function Article({ data, classes, pageContext, currentLang }) {
 
   return (
     <Layout>
-      <div className="slide"> {path === "/it/" ? <Slide /> : ""} </div>
-      <div className="slide"> {path === "/en/" ? <Slide /> : ""} </div>
+      <div className="slide"> {path === "inrome/it/" ? <Slide /> : ""} </div>
+      <div className="slide"> {path === "inrome/en/" ? <Slide /> : ""} </div>
       <div>
         <section className="py-5">
           <Container>
@@ -27,8 +27,8 @@ export default function Article({ data, classes, pageContext, currentLang }) {
             </Row>
           </Container>
         </section>
-        <div> {path === "/it/" ? <Box /> : ""} </div>
-        <div> {path === "/en/" ? <Box /> : ""} </div>
+        <div> {path === "inrome/it/" ? <Box /> : ""} </div>
+        <div> {path === "inrome/en/" ? <Box /> : ""} </div>
       </div>
     </Layout>
   )
