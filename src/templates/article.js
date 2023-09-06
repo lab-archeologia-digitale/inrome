@@ -11,7 +11,6 @@ export default function Article({ data, classes, pageContext, currentLang }) {
   const lang = ["it", "en"].includes(pageContext.lang) ? pageContext.lang : "en"
   const location = useLocation()
   const path = location.pathname
-
   console.log(path)
 
   return (

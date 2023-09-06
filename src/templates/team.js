@@ -214,7 +214,7 @@ const Team = (currentLang, currentPath) => {
                 })}
               </Row>
               <Row>
-                <h2>AIT Austrian Institute of Technology</h2>
+                <h2>AIT Austrian Institute of Technology </h2>
                 {data.directus.ait.map((person, index) => {
                   return (
                     <Col xs="12" lg="3" className="py-3" key={index}>
