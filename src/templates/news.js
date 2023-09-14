@@ -94,6 +94,7 @@ const Wrapper = styled.section`
 
 .news-link {
     text-transform: uppercase;
+    font-weight:bolder;
   }
     .news-link a {
       color: #ffffff;
