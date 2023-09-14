@@ -58,7 +58,7 @@ const FooterPage = () => {
               rel="noreferrer"
             >
               <StaticImage
-                src="../images/ait.png"
+                src="../images/ait-logo_blog.svg"
                 height={71}
                 quality={30}
                 formats={["AUTO", "WEBP"]}
