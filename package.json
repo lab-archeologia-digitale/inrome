@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "author": "Eleonora Icopini <eleonira.iacopini@uniroma1.it>",
   "dependencies": {
-    "@directus/gatsby-source-directus": "github:jbogdani/gatsby-source-directus",
+    "@directus/gatsby-source-directus": "^9.16.2",
     "@popperjs/core": "^2.11.6",
     "babel-plugin-styled-components": "^2.1.4",
     "bootstrap": "^5.2.2",
