@@ -5,13 +5,12 @@ import Navbar from "react-bootstrap/Navbar"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-function MainMenu({currentLang}) {
-
+function MainMenu({ currentLang }) {
   const data = useStaticQuery(graphql`
     {
       directus {
         menu: cms_articles(
-          sort: "id"
+          sort: "order"
           filter: { tags: { _contains: "home-item" } }
         ) {
           title
@@ -31,10 +30,14 @@ function MainMenu({currentLang}) {
               return (
                 <div className="containerLink" key={index}>
                   <Nav.Link
-                    href={withPrefix(`${currentLang}/${menuItem.slug === 'home' ? '' : menuItem.slug}`)}
+                    href={withPrefix(
+                      `${currentLang}/${
+                        menuItem.slug === "home" ? "" : menuItem.slug
+                      }`,
+                    )}
                     className="nav-item my-2"
                   >
-                    { (currentLang === 'it') ? menuItem.title_it : menuItem.title}
+                    {currentLang === "it" ? menuItem.title_it : menuItem.title}
                   </Nav.Link>
                 </div>
               )
@@ -99,4 +102,4 @@ const Menu = styled.section`
   }
 `
 
-export default MainMenu;
+export default MainMenu
