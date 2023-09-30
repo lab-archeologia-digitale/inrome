@@ -284,7 +284,7 @@ const Team = (currentLang, currentPath) => {
                           <Card.Title className="border-bottom">
                             {person.title}
                           </Card.Title>
-                          <Card.Text
+                          {/* <Card.Text
                             className="text-center"
                             style={{
                               fontSize: "0.7rem",
@@ -295,7 +295,7 @@ const Team = (currentLang, currentPath) => {
                                 "$1<br />$2",
                               ),
                             }}
-                          ></Card.Text>
+                          ></Card.Text> */}
                         </Card.Body>
                       </Card>
                     </Col>
