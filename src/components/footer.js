@@ -99,6 +99,9 @@ const FooterPage = () => {
             <a href={withPrefix("/contacts")} className="footer-link">
               CONTACT{" "}
             </a>
+            <a href={withPrefix("/contacts")} className="footer-link">
+              CREDITS{" "}
+            </a>
           </Col>
           <Col sm={4} xs={12} className="d-flex justify-content-end"></Col>
         </Row>
