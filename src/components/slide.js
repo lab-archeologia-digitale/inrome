@@ -14,14 +14,14 @@ function Slide() {
             formats={["AUTO", "WEBP"]}
             alt="InRome"
           />
-          <Carousel.Caption>
+          {/*  <Carousel.Caption>
             <h3>LORE IPSUM DOLOR SIT AMET</h3>
             <span className="subTitle">
               Nulla vitae elit libero, a pharetra augue mollis interdum.
             </span>
             <br></br>
             <button className="btn btn-primary m-4">LINK</button>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <StaticImage
@@ -30,14 +30,14 @@ function Slide() {
             formats={["AUTO", "WEBP"]}
             alt="InRome"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>LORE IPSUM DOLOR SIT AMET</h3>
             <span className="subTitle">
               Nulla vitae elit libero, a pharetra augue mollis interdum.
             </span>
             <br></br>
             <button className="btn btn-primary m-4">LINK</button>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <StaticImage
@@ -46,14 +46,14 @@ function Slide() {
             formats={["AUTO", "WEBP"]}
             alt="InRome"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>LORE IPSUM DOLOR SIT AMET</h3>
             <span className="subTitle">
               Nulla vitae elit libero, a pharetra augue mollis interdum.
             </span>
             <br></br>
             <button className="btn btn-primary m-4">LINK</button>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
       </Carousel>
     </Slider>
