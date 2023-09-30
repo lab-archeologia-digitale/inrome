@@ -100,7 +100,7 @@ const FooterPage = () => {
               CONTACT{" "}
             </a>
             <a href={withPrefix("/contacts")} className="footer-link">
-              CREDITS{" "}
+              CREDIT{" "}
             </a>
           </Col>
           <Col sm={4} xs={12} className="d-flex justify-content-end"></Col>
