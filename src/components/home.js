@@ -49,7 +49,7 @@ const Home = () => {
                 <div className="card-body">
                   <h5 className="card-title">
                     {" "}
-                    <a href="/">Sub Projects</a>
+                    <a href="/">Collaborations</a>
                   </h5>
                 </div>
               </Card>
