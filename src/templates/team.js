@@ -282,7 +282,12 @@ const Team = (currentLang, currentPath) => {
                           className={person.color}
                         >
                           <Card.Title className="border-bottom">
-                            {person.title}
+                            <Link
+                              className="card-link"
+                              to={`/en/${person.slug}`}
+                            >
+                              {person.title}
+                            </Link>
                           </Card.Title>
                           <Card.Text
                             className="text-center"
