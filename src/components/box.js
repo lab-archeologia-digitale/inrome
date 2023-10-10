@@ -39,9 +39,9 @@ function Box({ currentLang }) {
                     <Link
                       href={withPrefix(
                         `${currentLang}/${
-                          data.directus.menu[0].slug === "collaborazioni"
+                          data.directus.menu[2].slug === "collaborazioni"
                             ? ""
-                            : data.directus.menu[0].slug
+                            : data.directus.menu[2].slug
                         }`,
                       )}
                       className="nav-item my-2"
@@ -68,9 +68,9 @@ function Box({ currentLang }) {
                     <Link
                       href={withPrefix(
                         `${currentLang}/${
-                          data.directus.menu[0].slug === "collaborazioni"
+                          data.directus.menu[1].slug === "news"
                             ? ""
-                            : data.directus.menu[0].slug
+                            : data.directus.menu[1].slug
                         }`,
                       )}
                       className="nav-item my-2"
