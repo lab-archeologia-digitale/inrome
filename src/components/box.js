@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
 
-function Box({ currentLang }) {
+function Box({ path }) {
   const data = useStaticQuery(graphql`
     {
       directus {
@@ -38,7 +38,7 @@ function Box({ currentLang }) {
                     {" "}
                     <Link
                       href={withPrefix(
-                        `${currentLang}/${
+                        `${path}/${
                           data.directus.menu[2].slug === "collaborazioni"
                             ? ""
                             : data.directus.menu[2].slug
@@ -46,7 +46,7 @@ function Box({ currentLang }) {
                       )}
                       className="nav-item my-2"
                     >
-                      {currentLang === "it"
+                      {path === "it"
                         ? data.directus.menu[2].title_it
                         : data.directus.menu[2].title}
                     </Link>
@@ -67,7 +67,7 @@ function Box({ currentLang }) {
                   <h5 className="card-title">
                     <Link
                       href={withPrefix(
-                        `${currentLang}/${
+                        `${path}/${
                           data.directus.menu[1].slug === "news"
                             ? ""
                             : data.directus.menu[1].slug
@@ -75,7 +75,7 @@ function Box({ currentLang }) {
                       )}
                       className="nav-item my-2"
                     >
-                      {currentLang === "it"
+                      {path === "it"
                         ? data.directus.menu[1].title_it
                         : data.directus.menu[1].title}
                     </Link>
@@ -96,7 +96,7 @@ function Box({ currentLang }) {
                   <h5 className="card-title">
                     <Link
                       href={withPrefix(
-                        `${currentLang}/${
+                        `${path}/${
                           data.directus.menu[0].slug === "collaborazioni"
                             ? ""
                             : data.directus.menu[0].slug
@@ -104,7 +104,7 @@ function Box({ currentLang }) {
                       )}
                       className="nav-item my-2"
                     >
-                      {currentLang === "it"
+                      {path === "it"
                         ? data.directus.menu[0].title_it
                         : data.directus.menu[0].title}
                     </Link>
