@@ -62,7 +62,7 @@ function Box({ currentLang }) {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <a href="en/news">News</a>
+                    <Link href="en/news">News</Link>
                   </h5>
                 </div>
               </Card>
@@ -78,7 +78,7 @@ function Box({ currentLang }) {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <a href="en/outputs">Outputs</a>
+                    <Link href="en/outputs">Outputs</Link>
                   </h5>
                 </div>
               </Card>
