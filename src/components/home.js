@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { Row, Col, Container, Card } from "react-bootstrap"
 
@@ -49,7 +49,7 @@ const Home = () => {
                 <div className="card-body">
                   <h5 className="card-title">
                     {" "}
-                    <a href="en/collaborazioni">Collaborations</a>
+                    <Link href="en/collaborazioni">Collaborations</Link>
                   </h5>
                 </div>
               </Card>
@@ -65,7 +65,7 @@ const Home = () => {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <a href="en/news">News</a>
+                    <Link href="en/news">News</Link>
                   </h5>
                 </div>
               </Card>
@@ -81,7 +81,7 @@ const Home = () => {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <a href="en/outputs">Outputs</a>
+                    <Link href="en/outputs">Outputs</Link>
                   </h5>
                 </div>
               </Card>

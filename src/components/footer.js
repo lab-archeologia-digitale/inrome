@@ -92,10 +92,10 @@ const FooterPage = () => {
             {/* <Link href="/" className="footer-link">
               SITE MAP{" "}
             </Link> */}
-            {/* <a href={withPrefix("/privacy")} className="footer-link">
+            {/* <Link href={withPrefix("/privacy")} className="footer-link">
               {" "}
               PRIVACY POLICIES{" "}
-            </a> */}
+            </Link> */}
             <Link href={withPrefix("en/contact")} className="footer-link">
               CONTACT{" "}
             </Link>
