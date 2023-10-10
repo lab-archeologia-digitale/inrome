@@ -100,7 +100,7 @@ export default function Article({ data, classes, pageContext }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link to="/">
+                        <Link href={withPrefix(`${lang2}/bibliografia`)}>
                           {lang === "it"
                             ? "Bibliografia"
                             : "Project Bibliography "}
