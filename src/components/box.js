@@ -8,7 +8,10 @@ function Box({ currentLang }) {
   const data = useStaticQuery(graphql`
     {
       directus {
-        menu: cms_articles(sort: "order") {
+        menu: cms_articles(
+          sort: "order"
+          filter: { tags: { _contains: "box" } }
+        ) {
           title
           title_it
           slug
@@ -44,8 +47,8 @@ function Box({ currentLang }) {
                       className="nav-item my-2"
                     >
                       {currentLang === "it"
-                        ? data.directus.menu[0].title_it
-                        : data.directus.menu[0].title}
+                        ? data.directus.menu[2].title_it
+                        : data.directus.menu[2].title}
                     </Link>
                   </h5>
                 </div>
@@ -62,7 +65,20 @@ function Box({ currentLang }) {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <Link href="en/news">News</Link>
+                    <Link
+                      href={withPrefix(
+                        `${currentLang}/${
+                          data.directus.menu[0].slug === "collaborazioni"
+                            ? ""
+                            : data.directus.menu[0].slug
+                        }`,
+                      )}
+                      className="nav-item my-2"
+                    >
+                      {currentLang === "it"
+                        ? data.directus.menu[1].title_it
+                        : data.directus.menu[1].title}
+                    </Link>
                   </h5>
                 </div>
               </Card>
@@ -78,7 +94,20 @@ function Box({ currentLang }) {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <Link href="en/outputs">Outputs</Link>
+                    <Link
+                      href={withPrefix(
+                        `${currentLang}/${
+                          data.directus.menu[0].slug === "collaborazioni"
+                            ? ""
+                            : data.directus.menu[0].slug
+                        }`,
+                      )}
+                      className="nav-item my-2"
+                    >
+                      {currentLang === "it"
+                        ? data.directus.menu[0].title_it
+                        : data.directus.menu[0].title}
+                    </Link>
                   </h5>
                 </div>
               </Card>
