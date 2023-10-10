@@ -30,7 +30,7 @@ function Box({ currentLang }) {
                 <StaticImage
                   src="../images/progetti.png"
                   formats={["AUTO", "WEBP"]}
-                  alt="progetti"
+                  alt="collaborazioni"
                   className="card-img-top"
                   height={300}
                 />
