@@ -36,7 +36,7 @@ export default function Article({ data, classes, pageContext }) {
                     <StaticImage
                       src="../images/biblio.png"
                       formats={["AUTO", "WEBP"]}
-                      alt="bibliografia"
+                      alt="pubblicazioni"
                       className="card-img-top"
                       height={300}
                     />
@@ -54,7 +54,7 @@ export default function Article({ data, classes, pageContext }) {
                     <StaticImage
                       src="../images/software.png"
                       formats={["AUTO", "WEBP"]}
-                      alt="news"
+                      alt="software"
                       className="card-img-top"
                       height={300}
                     />
@@ -94,7 +94,7 @@ export default function Article({ data, classes, pageContext }) {
                     <StaticImage
                       src="../images/biblio2.png"
                       formats={["AUTO", "WEBP"]}
-                      alt="output"
+                      alt="bibliografia"
                       className="card-img-top"
                       height={300}
                     />
