@@ -2,20 +2,8 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Row, Col, Container, Card } from "react-bootstrap"
-import { useStaticQuery, graphql, Link } from "gatsby"
 
-function Box(currentLang) {
-  const data = useStaticQuery(graphql`
-    {
-      directus {
-        menu: cms_articles(sort: "order") {
-          title
-          title_it
-          slug
-        }
-      }
-    }
-  `)
+function Box() {
   return (
     <section className="py-5 text-center news">
       <Wrapper>
@@ -31,23 +19,7 @@ function Box(currentLang) {
                   height={300}
                 />
                 <div className="card-body">
-                  <h5 className="card-title">
-                    {" "}
-                    <Link
-                      href={withPrefix(
-                        `${currentLang}/${
-                          menuItem.slug === "collaborazioni"
-                            ? ""
-                            : menuItem.slug
-                        }`,
-                      )}
-                      className="nav-item my-2"
-                    >
-                      {currentLang === "it"
-                        ? menuItem.title_it
-                        : menuItem.title}
-                    </Link>
-                  </h5>
+                  <h5 className="card-title"> collaborazioni </h5>
                 </div>
               </Card>
             </Col>
