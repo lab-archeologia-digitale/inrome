@@ -36,16 +36,16 @@ function Box({ currentLang }) {
                     <Link
                       href={withPrefix(
                         `${currentLang}/${
-                          data.directus.nenu[0].slug === "collaborazioni"
+                          data.directus.menu[0].slug === "collaborazioni"
                             ? ""
-                            : data.directus.nenu[0].slug
+                            : data.directus.menu[0].slug
                         }`,
                       )}
                       className="nav-item my-2"
                     >
                       {currentLang === "it"
-                        ? data.directus.nenu[0].title_it
-                        : data.directus.nenu[0].title}
+                        ? data.directus.menu[0].title_it
+                        : data.directus.menu[0].title}
                     </Link>
                   </h5>
                 </div>
