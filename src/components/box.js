@@ -19,7 +19,7 @@ function Box({ currentLang }) {
       }
     }
   `)
-  console.log(data.directus.menu[1].slug)
+
   return (
     <section className="py-5 text-center news">
       <Wrapper>

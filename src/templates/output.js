@@ -1,11 +1,11 @@
 import React from "react"
 import { Row, Col, Container, Card } from "react-bootstrap"
-import { graphql, Link } from "gatsby"
+import { graphql, Link, withPrefix } from "gatsby"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-export default function Article({ data, classes, pageContext }) {
+export default function Article({ data, classes, pageContext, currentLang }) {
   const article = data.directus.cms_articles[0]
   const lang = ["it", "en"].includes(pageContext.lang) ? pageContext.lang : "en"
 
@@ -33,13 +33,15 @@ export default function Article({ data, classes, pageContext }) {
                     <StaticImage
                       src="../images/biblio.png"
                       formats={["AUTO", "WEBP"]}
-                      alt="progetti"
+                      alt="bibliografia"
                       className="card-img-top"
                       height={300}
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link to="/">
+                        <Link
+                          href={withPrefix(`${currentLang}/"publications"}`)}
+                        >
                           {lang === "it" ? "Pubblicazioni" : "Pubblication"}
                         </Link>
                       </h5>
