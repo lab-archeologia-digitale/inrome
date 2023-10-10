@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
 
-function Box({ path }) {
+function Box({ currentLang }) {
   const data = useStaticQuery(graphql`
     {
       directus {
@@ -19,6 +19,7 @@ function Box({ path }) {
       }
     }
   `)
+  console.log(data.directus.menu[1].slug)
   return (
     <section className="py-5 text-center news">
       <Wrapper>
@@ -38,15 +39,11 @@ function Box({ path }) {
                     {" "}
                     <Link
                       href={withPrefix(
-                        `${path}/${
-                          data.directus.menu[2].slug === "collaborazioni"
-                            ? ""
-                            : data.directus.menu[2].slug
-                        }`,
+                        `${currentLang}/${data.directus.menu[2].slug}`,
                       )}
                       className="nav-item my-2"
                     >
-                      {path === "it"
+                      {currentLang === "it"
                         ? data.directus.menu[2].title_it
                         : data.directus.menu[2].title}
                     </Link>
@@ -67,15 +64,11 @@ function Box({ path }) {
                   <h5 className="card-title">
                     <Link
                       href={withPrefix(
-                        `${path}/${
-                          data.directus.menu[1].slug === "news"
-                            ? ""
-                            : data.directus.menu[1].slug
-                        }`,
+                        `${currentLang}/${data.directus.menu[1].slug}`,
                       )}
                       className="nav-item my-2"
                     >
-                      {path === "it"
+                      {currentLang === "it"
                         ? data.directus.menu[1].title_it
                         : data.directus.menu[1].title}
                     </Link>
@@ -96,15 +89,11 @@ function Box({ path }) {
                   <h5 className="card-title">
                     <Link
                       href={withPrefix(
-                        `${path}/${
-                          data.directus.menu[0].slug === "collaborazioni"
-                            ? ""
-                            : data.directus.menu[0].slug
-                        }`,
+                        `${currentLang}/${data.directus.menu[0].slug}`,
                       )}
                       className="nav-item my-2"
                     >
-                      {path === "it"
+                      {currentLang === "it"
                         ? data.directus.menu[0].title_it
                         : data.directus.menu[0].title}
                     </Link>

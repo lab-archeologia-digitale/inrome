@@ -11,7 +11,7 @@ export default function Article({ data, classes, pageContext, currentLang }) {
   const lang = ["it", "en"].includes(pageContext.lang) ? pageContext.lang : "en"
   const location = useLocation()
   const path = location.pathname
-  console.log(path)
+  const lang2 = location.pathname.includes("/it/") ? "it" : "en"
 
   return (
     <Layout>
@@ -30,8 +30,8 @@ export default function Article({ data, classes, pageContext, currentLang }) {
             </Row>
           </Container>
         </section>
-        <div> {path === "/inrome/it/" ? <Box /> : ""} </div>
-        <div> {path === "/inrome/en/" ? <Box /> : ""} </div>
+        <div> {path === "/inrome/it/" ? <Box currentLang={lang2} /> : ""} </div>
+        <div> {path === "/inrome/en/" ? <Box currentLang={lang2} /> : ""} </div>
       </div>
     </Layout>
   )
