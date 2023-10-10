@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
+import { useLocation } from "@reach/router"
 
 const location = useLocation()
 const lang = location.pathname.includes("/it/") ? "it" : "en"
