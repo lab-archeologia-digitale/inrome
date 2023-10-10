@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 import { Col, Container, Row } from "react-bootstrap"
@@ -12,20 +13,20 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
         <Row className="px-5 pt-5">
           <Col sm={8} xs={12} className="d-flex justify-content-start p-0">
             <div>
-              <a href="/">
+              <Link href="/inrome">
                 <StaticImage
                   src="../images/INRome_logo_def.png"
                   width={250}
                   formats={["AUTO", "WEBP"]}
                   alt={siteTitle}
                 />
-              </a>
+              </Link>
               <p className="header-title">{siteTitle}</p>
             </div>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end logoMobile">
             <div>
-              <a
+              <Link
                 href="https://erc.europa.eu/homepage"
                 target="_blank"
                 rel="noreferrer"
@@ -37,12 +38,16 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
                   formats={["AUTO", "WEBP"]}
                   alt="erc"
                 />
-              </a>
+              </Link>
             </div>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end logoMobile">
             <div>
-              <a href="https://www.sns.it/it" target="_blank" rel="noreferrer">
+              <Link
+                href="https://www.sns.it/it"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <StaticImage
                   src="../images/logo-sns@2x_0.png"
                   height={71}
@@ -50,7 +55,7 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
                   formats={["AUTO", "WEBP"]}
                   alt="SNS"
                 />
-              </a>
+              </Link>
             </div>
           </Col>
         </Row>
@@ -65,12 +70,14 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
             <span>
               {currentLang === "it" && (
                 <span>
-                  IT - <a href={currentPath.replace("/it/", "/en/")}>EN</a>
+                  IT -{" "}
+                  <Link href={currentPath.replace("/it/", "/en/")}>EN</Link>
                 </span>
               )}
               {currentLang === "en" && (
                 <span>
-                  <a href={currentPath.replace("/en/", "/it/")}>IT</a> - EN
+                  <Link href={currentPath.replace("/en/", "/it/")}>IT</Link> -
+                  EN
                 </span>
               )}
             </span>
