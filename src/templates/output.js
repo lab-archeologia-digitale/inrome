@@ -4,10 +4,13 @@ import { graphql, Link, withPrefix } from "gatsby"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { useLocation } from "@reach/router"
 
-export default function Article({ data, classes, pageContext, currentLang }) {
+export default function Article({ data, classes, pageContext }) {
   const article = data.directus.cms_articles[0]
   const lang = ["it", "en"].includes(pageContext.lang) ? pageContext.lang : "en"
+  const location = useLocation()
+  const lang2 = location.pathname.includes("/it/") ? "it" : "en"
 
   return (
     <Layout>
@@ -39,9 +42,7 @@ export default function Article({ data, classes, pageContext, currentLang }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link
-                          href={withPrefix(`${currentLang}/"publications"}`)}
-                        >
+                        <Link href={withPrefix(`${lang2}/publications`)}>
                           {lang === "it" ? "Pubblicazioni" : "Pubblication"}
                         </Link>
                       </h5>
