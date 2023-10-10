@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { withPrefix } from "gatsby"
+import { withPrefix, Link } from "gatsby"
 import { Col, Container, Row } from "react-bootstrap"
 
 const FooterPage = () => {
@@ -89,19 +89,19 @@ const FooterPage = () => {
             xs={12}
             className="d-flex Link-footer justify-content-center"
           >
-            <a href="/" className="footer-link">
+            <Link href="/" className="footer-link">
               SITE MAP{" "}
-            </a>
+            </Link>
             {/* <a href={withPrefix("/privacy")} className="footer-link">
               {" "}
               PRIVACY POLICIES{" "}
             </a> */}
-            <a href={withPrefix("/contact")} className="footer-link">
+            <Link href={withPrefix("/contact")} className="footer-link">
               CONTACT{" "}
-            </a>
-            <a href={withPrefix("/credit")} className="footer-link">
+            </Link>
+            <Link href={withPrefix("/credit")} className="footer-link">
               CREDITS{" "}
-            </a>
+            </Link>
           </Col>
           <Col sm={4} xs={12} className="d-flex justify-content-end"></Col>
         </Row>
