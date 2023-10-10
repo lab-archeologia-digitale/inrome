@@ -4,6 +4,9 @@ import styled from "styled-components"
 import { Row, Col, Container, Card } from "react-bootstrap"
 import { useStaticQuery, graphql, Link, withPrefix } from "gatsby"
 
+const location = useLocation()
+const lang = location.pathname.includes("/it/") ? "it" : "en"
+
 function Box({ currentLang }) {
   const data = useStaticQuery(graphql`
     {
@@ -22,7 +25,7 @@ function Box({ currentLang }) {
   return (
     <section className="py-5 text-center news">
       <Wrapper>
-        <Container>
+        <Container currentLang={lang}>
           <Row>
             <Col sm={4} xs={12}>
               <Card>
