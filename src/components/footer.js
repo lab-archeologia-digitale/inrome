@@ -11,7 +11,7 @@ const FooterPage = () => {
         <Row className="px-5 pt-5">
           <Col sm={2} xs={12} className="d-flex ">
             <div>
-              <a href="/">
+              <Link href="/">
                 <StaticImage
                   src="../images/INRome_logo_def.png"
                   width={140}
@@ -20,13 +20,13 @@ const FooterPage = () => {
                   alt="InRome"
                   className="img-fluid"
                 />
-              </a>
+              </Link>
               <p className="footer-title">© Scuola Normale Superiore</p>
             </div>
           </Col>
 
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a href="https://www.sns.it/it" target="_blank" rel="noreferrer">
+            <Link href="https://www.sns.it/it" target="_blank" rel="noreferrer">
               <StaticImage
                 src="../images/logo-sns@2x_0.png"
                 height={71}
@@ -34,10 +34,10 @@ const FooterPage = () => {
                 formats={["AUTO", "WEBP"]}
                 alt="SNS"
               />
-            </a>
+            </Link>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a
+            <Link
               href="https://www.uniroma1.it/it/pagina-strutturale/home"
               target="_blank"
               rel="noreferrer"
@@ -49,10 +49,10 @@ const FooterPage = () => {
                 formats={["AUTO", "WEBP"]}
                 alt="Sapienza Università di Roma"
               />
-            </a>
+            </Link>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a
+            <Link
               href="https://www.ait.ac.at/en/"
               target="_blank"
               rel="noreferrer"
@@ -64,10 +64,10 @@ const FooterPage = () => {
                 formats={["AUTO", "WEBP"]}
                 alt="AIT"
               />
-            </a>
+            </Link>
           </Col>
           <Col sm={2} xs={6} className="d-flex justify-content-end">
-            <a
+            <Link
               href="https://erc.europa.eu/homepage"
               target="_blank"
               rel="noreferrer"
@@ -79,7 +79,7 @@ const FooterPage = () => {
                 formats={["AUTO", "WEBP"]}
                 alt="EU"
               />
-            </a>
+            </Link>
           </Col>
         </Row>
         <Row>
