@@ -43,7 +43,7 @@ export default function Article({ data, classes, pageContext }) {
                     <div className="card-body">
                       <h5 className="card-title">
                         <Link href={withPrefix(`${lang2}/publications`)}>
-                          {lang === "it" ? "Pubblicazioni" : "Pubblication"}
+                          {lang === "it" ? "Pubblicazioni" : "Publications"}
                         </Link>
                       </h5>
                     </div>
