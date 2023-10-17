@@ -32,7 +32,7 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
                 rel="noreferrer"
               >
                 <StaticImage
-                  src="../images/erc-logo.svg"
+                  src="../images/eu-erc.png"
                   height={71}
                   quality={30}
                   formats={["AUTO", "WEBP"]}
