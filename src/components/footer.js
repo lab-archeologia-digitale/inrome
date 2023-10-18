@@ -89,17 +89,10 @@ const FooterPage = () => {
             xs={12}
             className="d-flex Link-footer justify-content-center"
           >
-            {/* <Link href="/" className="footer-link">
-              SITE MAP{" "}
-            </Link> */}
-            {/* <Link href={withPrefix("/privacy")} className="footer-link">
-              {" "}
-              PRIVACY POLICIES{" "}
-            </Link> */}
-            <Link href={withPrefix("en/contact")} className="footer-link">
+            <Link to={withPrefix("en/contact")} className="footer-link">
               CONTACT{" "}
             </Link>
-            <Link href={withPrefix("en/credit")} className="footer-link">
+            <Link to={withPrefix("en/credit")} className="footer-link">
               CREDIT{" "}
             </Link>
           </Col>

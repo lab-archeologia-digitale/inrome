@@ -60,7 +60,7 @@ export default function Article({ data, classes, pageContext }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link href={withPrefix(`${lang2}/software`)}>
+                        <Link to={withPrefix(`${lang2}/software`)}>
                           Software
                         </Link>
                       </h5>
@@ -100,7 +100,7 @@ export default function Article({ data, classes, pageContext }) {
                     />
                     <div className="card-body">
                       <h5 className="card-title">
-                        <Link href={withPrefix(`${lang2}/bibliografia`)}>
+                        <Link to={withPrefix(`${lang2}/bibliografia`)}>
                           {lang === "it"
                             ? "Bibliografia"
                             : "Project Bibliography "}

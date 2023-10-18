@@ -49,7 +49,7 @@ const Home = () => {
                 <div className="card-body">
                   <h5 className="card-title">
                     {" "}
-                    <Link href="en/collaborazioni">Collaborations</Link>
+                    <Link to="en/collaborazioni">Collaborations</Link>
                   </h5>
                 </div>
               </Card>
@@ -81,7 +81,7 @@ const Home = () => {
                 />
                 <div className="card-body">
                   <h5 className="card-title">
-                    <Link href="en/outputs">Outputs</Link>
+                    <Link to="en/outputs">Outputs</Link>
                   </h5>
                 </div>
               </Card>

@@ -13,7 +13,7 @@ const Navbar = ({ siteTitle, currentLang, currentPath }) => {
         <Row className="px-5 pt-5">
           <Col sm={8} xs={12} className="d-flex justify-content-start p-0">
             <div>
-              <Link href="/">
+              <Link to="/">
                 <StaticImage
                   src="../images/INRome_logo_def.png"
                   width={250}
