@@ -44,10 +44,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy:domain": "gatsby build && rsync -arvzu --delete public/ inrome:website/",
-    "deploy:ci": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/lab-archeologia-digitale/inrome.git"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
